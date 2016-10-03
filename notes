@@ -1,0 +1,4 @@
+highline: ask, say
+slop: option parser
+trollop: option parser
+cocaine: transform unix commands in executable blocks of code 
