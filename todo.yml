@@ -1,10 +1,9 @@
-testing other parsing tools.
-highline 
-slop 
-trollop cocaine mixllb-cll 
-gll
-commander
-clamp
-
+studying commander api in ./commander
+learn more about commander before start program
+learn about the implementation of the commander progress bar
 figuring out the progress bar
+
+done:
+testing other parsing tools, highline, slop, trollop, cocaine, mixlib-cli, gli, commander, clamp
+
 
