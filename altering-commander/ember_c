@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+require 'byebug'
+require './commander-altered/lib/commander/import'
+
+program :name, 'ember-c'
+program :version, '0.0.1'
+program :description, 'implementing ember with modified commander'
+
+command :new do
+	syntax = 'ember-c new <name>'
+	summary = 'create a new ember project'
+	description = 'Create a new ember project'
+	action do |args, options|
+		puts args[0]
+	end
+end
+
+# new spec
+#command :deploy do
+#	helpers :io, :http
+#
+#	command :heroku do
+#		actions_ext './deploy/heroku'
+#	end
+#
+#	command :s3 do
+#		actions_ext './deploy/s3'
+#	end
+#end

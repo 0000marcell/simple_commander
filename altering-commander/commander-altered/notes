@@ -1,0 +1,44 @@
+blank.rb: ??? module, probably search for undefined methods on a given base							 class
+command.rb: initialize a new command, add description and options
+						handle execution, when_called and action are alias
+						also creates option_proc
+configure.rb: module uses configuration options
+core_ext.rb: require 'commander/core_ext/array' and object
+delegates.rb: module commander delegates, delegates a new piece 
+							of method, uses commander::Runner
+help_formatters.rb: loads base, terminal and terminalcompact
+										have classes Context and ProgramContext
+import.rb: require 'commander' include Commander::Methods at exit 
+					 calls run! 
+methods.rb: module commander::methods include Commander::UI, 
+						Commander::UI::AskForClass, Commander::Delegates,
+						format $terminal output
+plataform.rb: Module Commander::Plataform verify if is jruby or 
+							not	
+runner.rb: possible start point, create default commands
+					 "run!" runs command parsing and execution process,
+					 implements the command method that creates a new command
+					 obj, option to alias a command, set a default_command when
+					 no command is passed in the argument, add_command add command 
+					 obj 
+user_interaction.rb: extends highline functionality like
+										 password, log, choose, say_ok, time_remaining
+										 steps_remaining, progress_bar etc..
+version.rb: sets module constant VERSION
+core_ext:
+array: used with highline to parse arguments of ask
+object: return the current binding 
+
+help_formatters:
+	base.rb: control the output when either the help command, 
+					 or --help switch are called
+	terminal.rb: extends base, renders the terminal template
+	terminal_compact.rb: extends terminal, renders the terminal 
+											 compact
+	terminal 
+		command_help.erb: format help messages for commands
+		help.erb: format help messages for the help commmand
+
+	terminal_compact: 
+		command_help.erb: reduced version of the command_help
+		help.erb: recuced version of help template
