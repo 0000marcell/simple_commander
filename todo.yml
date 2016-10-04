@@ -1,9 +1,12 @@
+clone commanderrb and alter its behavior 
+use rubocop
 studying commander api in ./commander
 learn more about commander before start program
 learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+read the commander implementation 
 testing other parsing tools, highline, slop, trollop, cocaine, mixlib-cli, gli, commander, clamp
 
 
