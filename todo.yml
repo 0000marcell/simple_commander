@@ -1,11 +1,18 @@
-clone commanderrb and alter its behavior 
+add suport for nested commands
+add suport for helpers
+make syntax, options ect.. actually methods instead of variables
+make help default command work too
+make say accept a color hex
+make possible to pass more than one action, and execute sequentially
+
 use rubocop
-studying commander api in ./commander
 learn more about commander before start program
 learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+studying commander api in ./commander
+clone commanderrb and alter its behavior 
 read the commander implementation 
 testing other parsing tools, highline, slop, trollop, cocaine, mixlib-cli, gli, commander, clamp
 

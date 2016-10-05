@@ -40,6 +40,13 @@ module Commander
       @options, @proxy_options = [], []
     end
 
+		##
+		# return the block if command have a when_called block
+
+		def has_no_action?
+			if @when_called.empty? then true else false end
+		end
+
     ##
     # Add a usage example for this command.
     #
@@ -135,7 +142,6 @@ module Commander
     #   # Pass an object to handle callback (requires method symbol)
     #   c.when_called SomeObject, :some_method
     #
-
     def when_called(*args, &block)
       fail ArgumentError, 'must pass an object, class, or block.' if args.empty? && !block
       @when_called = block ? [block] : args

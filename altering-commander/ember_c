@@ -15,6 +15,40 @@ command :new do
 	end
 end
 
+command :this do
+	command :is do
+		command :ok do
+			command :dont do
+				command :worry do
+					action do
+						puts "this is ok dont worry"
+					end
+				end
+			end
+
+			command :also do
+				action do
+					puts "this is ok also"
+				end
+			end
+		end
+	end
+end
+
+command :parent do
+	command :child do
+		action do |args, options|
+			puts 'nested child'	
+		end
+	end	
+end
+
+command 'do this' do
+	action do |args, options|
+		puts "do this!"
+	end
+end
+
 # new spec
 #command :deploy do
 #	helpers :io, :http

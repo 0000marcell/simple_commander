@@ -48,12 +48,12 @@ module Commander
     # Run command parsing and execution process.
 
     def run!
-      trace = @always_trace || false
+			have_action?
+			trace = @always_trace || false
       require_program :version, :description
       trap('INT') { abort program(:int_message) } if program(:int_message)
       trap('INT') { program(:int_block).call } if program(:int_block)
       global_option('-h', '--help', 'Display help documentation') do
-				debugger
         args = @args - %w(-h --help)
         command(:help).run(*args)
         return
@@ -86,6 +86,24 @@ module Commander
         end
       end
     end
+
+		##
+		# tests if the current active command have an action block
+
+		def have_action?
+			goto_child_command if active_command.has_no_action?
+		end
+
+		##
+		# make the child command the active_command 
+		# and remove the current command from the @args
+		
+		def goto_child_command 
+			@args.shift
+			@__active_command = nil
+			@__command_name_from_args = nil
+			have_action?
+		end
 
     ##
     # Return program version.
@@ -234,7 +252,7 @@ module Commander
 
     ##
     # Get active command within arguments passed to this runner.
-
+		
     def active_command
       @__active_command ||= command(command_name_from_args)
     end
