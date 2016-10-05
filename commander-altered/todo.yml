@@ -1,0 +1,26 @@
+create a exemple program using the current api
+
+run! command:
+require_program: verifies if the program was set if not raises an error
+trap('INT')..: sets the block to be executed if the program is interrupted
+global_option...: adds global options --help --version --trace to a @option                  object 
+parse_global_options: create a instance of optionparser and parse
+                      the options
+remove_global_options: do exactly what it says, very verbose method
+run_active_command:
+  require_valid_command: uses active_command who tries to find a command
+                         in the args using command_name_from_args
+  alias?: verify if the command have a alias, if it has calls
+          run method on the command object
+          otherwise just calls run directly without consulting 
+          aliases the name of the command is removed 
+          from the args, the remainder of the arguments is passed to run 
+  run on command: run method call   
+  call: run method parse_options_and_all_procs(*args)
+  parse_options_and_call_procs(*args): parse the options and 
+                                       call the options procs 
+                                       before running the command
+  call: remove the proc action from @when_called
+        instantiate the class option of command for proxy_options
+        run the block if it is a proc passing the remainder args and
+        options

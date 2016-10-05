@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>README - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-Commander">Commander</a>
+    <li><a href="#label-Features">Features</a>
+    <li><a href="#label-Installation">Installation</a>
+    <li><a href="#label-Quick+Start">Quick Start</a>
+    <li><a href="#label-Example">Example</a>
+    <li><a href="#label-Classic+style">Classic style</a>
+    <li><a href="#label-Modular+style">Modular style</a>
+    <li><a href="#label-Block+style">Block style</a>
+    <li><a href="#label-HighLine">HighLine</a>
+    <li><a href="#label-HighLine+-26+Interaction+Additions">HighLine &amp; Interaction Additions</a>
+    <li><a href="#label-Growl+Notifications">Growl Notifications</a>
+    <li><a href="#label-Commander+Goodies">Commander Goodies</a>
+    <li><a href="#label-Option+Defaults">Option Defaults</a>
+    <li><a href="#label-Command+Aliasing">Command Aliasing</a>
+    <li><a href="#label-Command+Defaults">Command Defaults</a>
+    <li><a href="#label-Additional+Global+Help">Additional Global Help</a>
+    <li><a href="#label-Global+Options">Global Options</a>
+    <li><a href="#label-Formatters">Formatters</a>
+    <li><a href="#label-Tracing">Tracing</a>
+    <li><a href="#label-Tips">Tips</a>
+    <li><a href="#label-ASCII+Tables">ASCII Tables</a>
+    <li><a href="#label-Running+Specifications">Running Specifications</a>
+    <li><a href="#label-Contrib">Contrib</a>
+    <li><a href="#label-License">License</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DEVELOPMENT.html">DEVELOPMENT</a>
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./History_rdoc.html">History</a>
+  
+    <li><a href="./LICENSE.html">LICENSE</a>
+  
+    <li><a href="./Manifest.html">Manifest</a>
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./commander_gemspec.html">commander.gemspec</a>
+  
+    <li><a href="./coverage/assets/0_10_0/application_css.html">application.css</a>
+  
+    <li><a href="./coverage/assets/0_10_0/application_js.html">application.js</a>
+  
+    <li><a href="./coverage/index_html.html">index.html</a>
+  
+    <li><a href="./notes.html">notes</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page README.md">
+
+<p><a href="http://travis-ci.org/commander-rb/commander"><img
+src="https://secure.travis-ci.org/commander-rb/commander.png?branch=master"
+alt="Build Status" /></a> <a
+href="http://inch-ci.org/github/commander-rb/commander"><img
+src="http://inch-ci.org/github/commander-rb/commander.png"></a></p>
+
+<h1 id="label-Commander"><a href="Commander.html">Commander</a><span><a href="#label-Commander">&para;</a> <a href="#top">&uarr;</a></span></h1>
+
+<p>The complete solution for Ruby command-line executables. <a
+href="Commander.html">Commander</a> bridges the gap between other terminal
+related libraries you know and love (OptionParser, HighLine), while
+providing many new features, and an elegant API.</p>
+
+<h2 id="label-Features">Features<span><a href="#label-Features">&para;</a> <a href="#top">&uarr;</a></span></h2>
+<ul><li>
+<p>Easier than baking cookies</p>
+</li><li>
+<p>Parses options using <a href="OptionParser.html">OptionParser</a></p>
+</li><li>
+<p>Auto-populates struct with options ( no more <code>{ |v|
+options[:recursive] = v }</code> )</p>
+</li><li>
+<p>Auto-generates help documentation via pluggable help formatters</p>
+</li><li>
+<p>Optional default command when none is present</p>
+</li><li>
+<p>Global / Command level options</p>
+</li><li>
+<p>Packaged with two help formatters (Terminal, TerminalCompact)</p>
+</li><li>
+<p>Imports the highline gem for interacting with the terminal</p>
+</li><li>
+<p>Adds additional user interaction functionality</p>
+</li><li>
+<p>Highly customizable progress bar with intuitive, simple usage</p>
+</li><li>
+<p>Multi-word command name support such as <code>drupal module install
+MOD</code>, rather than <code>drupal module_install MOD</code></p>
+</li><li>
+<p>Sexy paging for long bodies of text</p>
+</li><li>
+<p>Support for MacOS text-to-speech</p>
+</li><li>
+<p>Command aliasing (very powerful, as both switches and arguments can be
+used)</p>
+</li><li>
+<p>Growl notification support for MacOS</p>
+</li><li>
+<p>Use the <code>commander</code> executable to initialize a commander driven
+program</p>
+</li></ul>
+
+<h2 id="label-Installation">Installation<span><a href="#label-Installation">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>$ gem install commander</pre>
+
+<h2 id="label-Quick+Start">Quick Start<span><a href="#label-Quick+Start">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>To generate a quick template for a commander app, run:</p>
+
+<pre>$ commander init yourfile.rb</pre>
+
+<p>To generate a quick modular style template for a commander app, run:</p>
+
+<pre>$ commander init --modular yourfile.rb</pre>
+
+<h2 id="label-Example">Example<span><a href="#label-Example">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>For more option examples view the <code>Commander::Command#option</code>
+method. Also an important feature to note is that action may be a class to
+instantiate, as well as an object, specifying a method to call, so view the
+RDoc for more information.</p>
+
+<h3 id="label-Classic+style">Classic style<span><a href="#label-Classic+style">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;commander/import&#39;</span>
+
+<span class="ruby-comment"># :name is optional, otherwise uses the basename of this executable</span>
+<span class="ruby-identifier">program</span> :<span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;Foo Bar&#39;</span>
+<span class="ruby-identifier">program</span> :<span class="ruby-identifier">version</span>, <span class="ruby-string">&#39;1.0.0&#39;</span>
+<span class="ruby-identifier">program</span> :<span class="ruby-identifier">description</span>, <span class="ruby-string">&#39;Stupid command that prints foo or bar.&#39;</span>
+
+<span class="ruby-identifier">command</span> :<span class="ruby-identifier">foo</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">syntax</span> = <span class="ruby-string">&#39;foobar foo&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&#39;Displays foo&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">say</span> <span class="ruby-string">&#39;foo&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-identifier">command</span> :<span class="ruby-identifier">bar</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">syntax</span> = <span class="ruby-string">&#39;foobar bar [options]&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&#39;Display bar with optional prefix and suffix&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">option</span> <span class="ruby-string">&#39;--prefix STRING&#39;</span>, <span class="ruby-constant">String</span>, <span class="ruby-string">&#39;Adds a prefix to bar&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">option</span> <span class="ruby-string">&#39;--suffix STRING&#39;</span>, <span class="ruby-constant">String</span>, <span class="ruby-string">&#39;Adds a suffix to bar&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>.<span class="ruby-identifier">default</span> :<span class="ruby-identifier">prefix</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;(&#39;</span>, :<span class="ruby-identifier">suffix</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;)&#39;</span>
+    <span class="ruby-identifier">say</span> <span class="ruby-node">&quot;#{options.prefix}bar#{options.suffix}&quot;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p>Example output:</p>
+
+<pre>$ foobar bar
+# =&gt; (bar)
+
+$ foobar bar --suffix &#39;}&#39; --prefix &#39;{&#39;
+# =&gt; {bar}</pre>
+
+<h3 id="label-Modular+style">Modular style<span><a href="#label-Modular+style">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p><strong>NOTE:</strong> Make sure to use <code>require
+&#39;commander&#39;</code> rather than <code>require
+&#39;commander/import&#39;</code>, otherwise <a
+href="Commander.html">Commander</a> methods will still be imported into the
+global namespace.</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;commander&#39;</span>
+
+<span class="ruby-keyword">class</span> <span class="ruby-constant">MyApplication</span>
+  <span class="ruby-identifier">include</span> <span class="ruby-constant">Commander</span><span class="ruby-operator">::</span><span class="ruby-constant">Methods</span>
+
+  <span class="ruby-keyword">def</span> <span class="ruby-identifier">run</span>
+    <span class="ruby-identifier">program</span> :<span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;Foo Bar&#39;</span>
+    <span class="ruby-identifier">program</span> :<span class="ruby-identifier">version</span>, <span class="ruby-string">&#39;1.0.0&#39;</span>
+    <span class="ruby-identifier">program</span> :<span class="ruby-identifier">description</span>, <span class="ruby-string">&#39;Stupid command that prints foo or bar.&#39;</span>
+
+    <span class="ruby-identifier">command</span> :<span class="ruby-identifier">foo</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">syntax</span> = <span class="ruby-string">&#39;foobar foo&#39;</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">description</span> = <span class="ruby-string">&#39;Displays foo&#39;</span>
+      <span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">say</span> <span class="ruby-string">&#39;foo&#39;</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">run!</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-constant">MyApplication</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">run</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$0</span> <span class="ruby-operator">==</span> <span class="ruby-keyword">__FILE__</span>
+</pre>
+
+<h3 id="label-Block+style">Block style<span><a href="#label-Block+style">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&#39;rubygems&#39;</span>
+<span class="ruby-identifier">require</span> <span class="ruby-string">&#39;commander&#39;</span>
+
+<span class="ruby-constant">Commander</span>.<span class="ruby-identifier">configure</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-identifier">program</span> :<span class="ruby-identifier">name</span>, <span class="ruby-string">&#39;Foo Bar&#39;</span>
+  <span class="ruby-identifier">program</span> :<span class="ruby-identifier">version</span>, <span class="ruby-string">&#39;1.0.0&#39;</span>
+  <span class="ruby-identifier">program</span> :<span class="ruby-identifier">description</span>, <span class="ruby-string">&#39;Stupid command that prints foo or bar.&#39;</span>
+
+  <span class="ruby-comment"># see classic style example for options</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<h2 id="label-HighLine">HighLine<span><a href="#label-HighLine">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>As mentioned above, the highline gem is imported into the global scope.
+Here are some quick examples for how to utilize highline in your commands:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Ask for password masked with &#39;*&#39; character</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Password:  &quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">echo</span> = <span class="ruby-string">&quot;*&quot;</span> }
+
+<span class="ruby-comment"># Ask for password</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Password:  &quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">echo</span> = <span class="ruby-keyword">false</span> }
+
+<span class="ruby-comment"># Ask if the user agrees (yes or no)</span>
+<span class="ruby-identifier">agree</span>(<span class="ruby-string">&quot;Do something?&quot;</span>)
+
+<span class="ruby-comment"># Asks on a single line (note the space after &#39;:&#39;)</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Name: &quot;</span>)
+
+<span class="ruby-comment"># Asks with new line after &quot;Description:&quot;</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Description:&quot;</span>)
+
+<span class="ruby-comment"># Calls Date#parse to parse the date string passed</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Birthday? &quot;</span>, <span class="ruby-constant">Date</span>)
+
+<span class="ruby-comment"># Ensures Integer is within the range specified</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Age? &quot;</span>, <span class="ruby-constant">Integer</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">q</span><span class="ruby-operator">|</span> <span class="ruby-identifier">q</span>.<span class="ruby-identifier">in</span> = <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">105</span> }
+
+<span class="ruby-comment"># Asks for a list of strings, converts to array</span>
+<span class="ruby-identifier">ask</span>(<span class="ruby-string">&quot;Fav colors?&quot;</span>, <span class="ruby-constant">Array</span>)
+</pre>
+
+<h2 id="label-HighLine+-26+Interaction+Additions">HighLine &amp; Interaction Additions<span><a href="#label-HighLine+-26+Interaction+Additions">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>In addition to highline&#39;s fantastic choice of methods, commander adds
+the following methods to simplify common tasks:</p>
+
+<pre class="ruby"><span class="ruby-comment"># Ask for password</span>
+<span class="ruby-identifier">password</span>
+
+<span class="ruby-comment"># Ask for password with specific message and mask character</span>
+<span class="ruby-identifier">password</span> <span class="ruby-string">&quot;Enter your password please:&quot;</span>, <span class="ruby-string">&#39;-&#39;</span>
+
+<span class="ruby-comment"># Ask for CLASS, which may be any valid class responding to #parse. Date, Time, Array, etc</span>
+<span class="ruby-identifier">names</span> = <span class="ruby-identifier">ask_for_array</span> <span class="ruby-string">&#39;Names: &#39;</span>
+<span class="ruby-identifier">bday</span> = <span class="ruby-identifier">ask_for_date</span> <span class="ruby-string">&#39;Birthday?: &#39;</span>
+
+<span class="ruby-comment"># Simple progress bar (Commander::UI::ProgressBar)</span>
+<span class="ruby-identifier">uris</span> = <span class="ruby-node">%w[
+  http://vision-media.ca
+  http://google.com
+  http://yahoo.com
+]</span>
+<span class="ruby-identifier">progress</span> <span class="ruby-identifier">uris</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">uri</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">res</span> = <span class="ruby-identifier">open</span> <span class="ruby-identifier">uri</span>
+  <span class="ruby-comment"># Do something with response</span>
+<span class="ruby-keyword">end</span>
+
+<span class="ruby-comment"># &#39;Log&#39; action to stdout</span>
+<span class="ruby-identifier">log</span> <span class="ruby-string">&quot;create&quot;</span>, <span class="ruby-string">&quot;path/to/file.rb&quot;</span>
+
+<span class="ruby-comment"># Enable paging of output after this point</span>
+<span class="ruby-identifier">enable_paging</span>
+
+<span class="ruby-comment"># Ask editor for input (EDITOR environment variable or whichever is available: TextMate, vim, vi, emacs, nano, pico)</span>
+<span class="ruby-identifier">ask_editor</span>
+
+<span class="ruby-comment"># Ask editor, supplying initial text</span>
+<span class="ruby-identifier">ask_editor</span> <span class="ruby-string">&#39;previous data to update&#39;</span>
+
+<span class="ruby-comment"># Ask editor, preferring a specific editor</span>
+<span class="ruby-identifier">ask_editor</span> <span class="ruby-string">&#39;previous data&#39;</span>, <span class="ruby-string">&#39;vim&#39;</span>
+
+<span class="ruby-comment"># Choose from an array of elements</span>
+<span class="ruby-identifier">choice</span> = <span class="ruby-identifier">choose</span>(<span class="ruby-string">&quot;Favorite language?&quot;</span>, :<span class="ruby-identifier">ruby</span>, :<span class="ruby-identifier">perl</span>, :<span class="ruby-identifier">js</span>)
+
+<span class="ruby-comment"># Alter IO for the duration of the block</span>
+<span class="ruby-identifier">io</span> <span class="ruby-identifier">new_input</span>, <span class="ruby-identifier">new_output</span> <span class="ruby-keyword">do</span>
+  <span class="ruby-identifier">new_input_contents</span> = <span class="ruby-identifier">$stdin</span>.<span class="ruby-identifier">read</span>
+  <span class="ruby-identifier">puts</span> <span class="ruby-identifier">new_input_contents</span> <span class="ruby-comment"># outputs to new_output stream</span>
+<span class="ruby-keyword">end</span>
+<span class="ruby-comment"># $stdin / $stdout reset back to original streams</span>
+
+<span class="ruby-comment"># Speech synthesis</span>
+<span class="ruby-identifier">speak</span> <span class="ruby-string">&#39;What is your favorite food? &#39;</span>
+<span class="ruby-identifier">food</span> = <span class="ruby-identifier">ask</span> <span class="ruby-string">&#39;favorite food?: &#39;</span>
+<span class="ruby-identifier">speak</span> <span class="ruby-node">&quot;Wow, I like #{food} too. We have so much in common.&quot;</span>
+<span class="ruby-identifier">speak</span> <span class="ruby-node">&quot;I like #{food} as well!&quot;</span>, <span class="ruby-string">&quot;Victoria&quot;</span>, <span class="ruby-value">190</span>
+
+<span class="ruby-comment"># Execute arbitrary applescript</span>
+<span class="ruby-identifier">applescript</span> <span class="ruby-string">&#39;foo&#39;</span>
+
+<span class="ruby-comment"># Converse with speech recognition server</span>
+<span class="ruby-keyword">case</span> <span class="ruby-identifier">converse</span> <span class="ruby-string">&#39;What is the best food?&#39;</span>, :<span class="ruby-identifier">cookies</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Cookies&#39;</span>, :<span class="ruby-identifier">unknown</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Nothing&#39;</span>
+<span class="ruby-keyword">when</span> :<span class="ruby-identifier">cookies</span>
+  <span class="ruby-identifier">speak</span> <span class="ruby-string">&#39;o.m.g. you are awesome!&#39;</span>
+<span class="ruby-keyword">else</span>
+  <span class="ruby-keyword">case</span> <span class="ruby-identifier">converse</span> <span class="ruby-string">&#39;That is lame, shall I convince you cookies are the best?&#39;</span>, :<span class="ruby-identifier">yes</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Ok&#39;</span>, :<span class="ruby-identifier">no</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;No&#39;</span>, :<span class="ruby-identifier">maybe</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&#39;Maybe another time&#39;</span>
+  <span class="ruby-keyword">when</span> :<span class="ruby-identifier">yes</span>
+    <span class="ruby-identifier">speak</span> <span class="ruby-string">&#39;Well you see, cookies are just fantastic, they melt in your mouth.&#39;</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">speak</span> <span class="ruby-string">&#39;Ok then, bye.&#39;</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<h2 id="label-Growl+Notifications">Growl Notifications<span><a href="#label-Growl+Notifications">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p><a href="Commander.html">Commander</a> provides methods for displaying
+Growl notifications. To use these methods you need to install <a
+href="http://github.com/tj/growl">github.com/tj/growl</a> which utilizes
+the <a href="http://growl.info/extras.php#growlnotify">growlnotify</a>
+executable. Note that growl is auto-imported by <a
+href="Commander.html">Commander</a> when available, no need to require.</p>
+
+<pre class="ruby"><span class="ruby-comment"># Display a generic Growl notification</span>
+<span class="ruby-identifier">notify</span> <span class="ruby-string">&#39;Something happened&#39;</span>
+
+<span class="ruby-comment"># Display an &#39;info&#39; status notification</span>
+<span class="ruby-identifier">notify_info</span> <span class="ruby-string">&#39;You have #{emails.length} new email(s)&#39;</span>
+
+<span class="ruby-comment"># Display an &#39;ok&#39; status notification</span>
+<span class="ruby-identifier">notify_ok</span> <span class="ruby-string">&#39;Gems updated&#39;</span>
+
+<span class="ruby-comment"># Display a &#39;warning&#39; status notification</span>
+<span class="ruby-identifier">notify_warning</span> <span class="ruby-string">&#39;1 gem failed installation&#39;</span>
+
+<span class="ruby-comment"># Display an &#39;error&#39; status notification</span>
+<span class="ruby-identifier">notify_error</span> <span class="ruby-node">&quot;Gem #{name} failed&quot;</span>
+</pre>
+
+<h2 id="label-Commander+Goodies"><a href="Commander.html">Commander</a> Goodies<span><a href="#label-Commander+Goodies">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<h3 id="label-Option+Defaults">Option Defaults<span><a href="#label-Option+Defaults">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>The options struct passed to <code>#action</code> provides a
+<code>#default</code> method, allowing you to set defaults in a clean
+manner for options which have not been set.</p>
+
+<pre class="ruby"><span class="ruby-identifier">command</span> :<span class="ruby-identifier">foo</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">option</span> <span class="ruby-string">&#39;--interval SECONDS&#39;</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-string">&#39;Interval in seconds&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">option</span> <span class="ruby-string">&#39;--timeout SECONDS&#39;</span>, <span class="ruby-constant">Integer</span>, <span class="ruby-string">&#39;Timeout in seconds&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">options</span>.<span class="ruby-identifier">default</span>        :<span class="ruby-identifier">interval</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>,
+      :<span class="ruby-identifier">timeout</span>  =<span class="ruby-operator">&gt;</span> <span class="ruby-value">60</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<h3 id="label-Command+Aliasing">Command Aliasing<span><a href="#label-Command+Aliasing">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Aliases can be created using the <code>#alias_command</code> method like
+below:</p>
+
+<pre class="ruby"><span class="ruby-identifier">command</span> :<span class="ruby-string">&#39;install gem&#39;</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> { <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;foo&#39;</span> }
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">alias_command</span> :<span class="ruby-string">&#39;gem install&#39;</span>, :<span class="ruby-string">&#39;install gem&#39;</span>
+</pre>
+
+<p>Or more complicated aliases can be made, passing any arguments as if it was
+invoked via the command line:</p>
+
+<pre class="ruby"><span class="ruby-identifier">command</span> :<span class="ruby-string">&#39;install gem&#39;</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">c</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">syntax</span> = <span class="ruby-string">&#39;install gem &lt;name&gt; [options]&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">option</span> <span class="ruby-string">&#39;--dest DIR&#39;</span>, <span class="ruby-constant">String</span>, <span class="ruby-string">&#39;Destination directory&#39;</span>
+  <span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span> <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;installing #{args.first} to #{options.dest}&quot;</span> }
+<span class="ruby-keyword">end</span>
+<span class="ruby-identifier">alias_command</span> :<span class="ruby-identifier">update</span>, :<span class="ruby-string">&#39;install gem&#39;</span>, <span class="ruby-string">&#39;rubygems&#39;</span>, <span class="ruby-string">&#39;--dest&#39;</span>, <span class="ruby-string">&#39;some_path&#39;</span>
+</pre>
+
+<pre>$ foo update
+# =&gt; installing rubygems to some_path</pre>
+
+<h3 id="label-Command+Defaults">Command Defaults<span><a href="#label-Command+Defaults">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Although working with a command executable framework provides many benefits
+over a single command implementation, sometimes you still want the ability
+to create a terse syntax for your command. With that in mind we may use
+<code>#default_command</code> to help with this. Considering our previous
+<code>:&#39;install gem&#39;</code> example:</p>
+
+<pre class="ruby"><span class="ruby-identifier">default_command</span> :<span class="ruby-identifier">update</span>
+</pre>
+
+<pre>$ foo
+# =&gt; installing rubygems to some_path</pre>
+
+<p>Keeping in mind that commander searches for the longest possible match when
+considering a command, so if you were to pass arguments to foo like below,
+expecting them to be passed to <code>:update</code>, this would be
+incorrect, and would end up calling <code>:&#39;install gem&#39;</code>, so
+be careful that the users do not need to use command names within the
+arguments.</p>
+
+<pre>$ foo install gem
+# =&gt; installing  to</pre>
+
+<h3 id="label-Additional+Global+Help">Additional Global Help<span><a href="#label-Additional+Global+Help">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Arbitrary help can be added using the following <code>#program</code>
+symbol:</p>
+
+<pre class="ruby"><span class="ruby-identifier">program</span> :<span class="ruby-identifier">help</span>, <span class="ruby-string">&#39;Author&#39;</span>, <span class="ruby-string">&#39;TJ Holowaychuk &lt;tj@vision-media.ca&gt;&#39;</span>
+</pre>
+
+<p>Which will output the rest of the help doc, along with:</p>
+
+<pre>AUTHOR:
+
+  TJ Holowaychuk &lt;tj@vision-media.ca&gt;</pre>
+
+<h3 id="label-Global+Options">Global Options<span><a href="#label-Global+Options">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Although most switches will be at the command level, several are available
+by default at the global level, such as <code>--version</code>, and
+<code>--help</code>. Using <code>#global_option</code> you can add
+additional global options:</p>
+
+<pre class="ruby"><span class="ruby-identifier">global_option</span>(<span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-string">&#39;--config FILE&#39;</span>, <span class="ruby-string">&#39;Load config data for your commands to use&#39;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-operator">...</span> }
+</pre>
+
+<p>This method accepts the same syntax as
+<code>Commander::Command#option</code> so check it out for documentation.</p>
+
+<p>All global options regardless of providing a block are accessable at the
+command level. This means that instead of the following:</p>
+
+<pre class="ruby"><span class="ruby-identifier">global_option</span>(<span class="ruby-string">&#39;--verbose&#39;</span>) { <span class="ruby-identifier">$verbose</span> = <span class="ruby-keyword">true</span> }
+<span class="ruby-operator">...</span>
+<span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">say</span> <span class="ruby-string">&#39;foo&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">$verbose</span>
+<span class="ruby-operator">...</span>
+</pre>
+
+<p>You may:</p>
+
+<pre class="ruby"><span class="ruby-identifier">global_option</span> <span class="ruby-string">&#39;--verbose&#39;</span>
+<span class="ruby-operator">...</span>
+<span class="ruby-identifier">c</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">args</span>, <span class="ruby-identifier">options</span><span class="ruby-operator">|</span>
+  <span class="ruby-identifier">say</span> <span class="ruby-string">&#39;foo&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">verbose</span>
+<span class="ruby-operator">...</span>
+</pre>
+
+<h3 id="label-Formatters">Formatters<span><a href="#label-Formatters">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>Two core formatters are currently available, the default
+<code>Terminal</code> formatter as well as <code>TerminalCompact</code>. To
+utilize a different formatter simply use <code>:help_formatter</code> like
+below:</p>
+
+<pre class="ruby"><span class="ruby-identifier">program</span> :<span class="ruby-identifier">help_formatter</span>, <span class="ruby-constant">Commander</span><span class="ruby-operator">::</span><span class="ruby-constant">HelpFormatter</span><span class="ruby-operator">::</span><span class="ruby-constant">TerminalCompact</span>
+</pre>
+
+<p>Or utilize the help formatter aliases:</p>
+
+<pre class="ruby"><span class="ruby-identifier">program</span> :<span class="ruby-identifier">help_formatter</span>, :<span class="ruby-identifier">compact</span>
+</pre>
+
+<p>This abstraction could be utilized to generate HTML documentation for your
+executable.</p>
+
+<h3 id="label-Tracing">Tracing<span><a href="#label-Tracing">&para;</a> <a href="#top">&uarr;</a></span></h3>
+
+<p>By default the <code>-t</code> and <code>--trace</code> global options are
+provided to allow users to get a backtrace to aid debugging.</p>
+
+<p>You can disable these options:</p>
+
+<pre class="ruby"><span class="ruby-identifier">never_trace!</span>
+</pre>
+
+<p>Or make it always on:</p>
+
+<pre class="ruby"><span class="ruby-identifier">always_trace!</span>
+</pre>
+
+<h2 id="label-Tips">Tips<span><a href="#label-Tips">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>When adding a global or command option, <a
+href="OptionParser.html">OptionParser</a> implicitly adds a small switch
+even when not explicitly created, for example <code>-c</code> will be the
+same as <code>--config</code> in both examples, however <code>-c</code>
+will only appear in the documentation when explicitly assigning it.</p>
+
+<pre class="ruby"><span class="ruby-identifier">global_option</span> <span class="ruby-string">&#39;-c&#39;</span>, <span class="ruby-string">&#39;--config FILE&#39;</span>
+<span class="ruby-identifier">global_option</span> <span class="ruby-string">&#39;--config FILE&#39;</span>
+</pre>
+
+<h2 id="label-ASCII+Tables">ASCII Tables<span><a href="#label-ASCII+Tables">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>For feature rich ASCII tables for your terminal app check out the
+terminal-table gem at <a
+href="http://github.com/tj/terminal-table">github.com/tj/terminal-table</a></p>
+
+<pre>+----------+-------+----+--------+-----------------------+
+| Terminal | Table | Is | Wicked | Awesome               |
++----------+-------+----+--------+-----------------------+
+|          |       |    |        | get it while its hot! |
++----------+-------+----+--------+-----------------------+</pre>
+
+<h2 id="label-Running+Specifications">Running Specifications<span><a href="#label-Running+Specifications">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<pre>$ rake spec</pre>
+
+<p>OR</p>
+
+<pre>$ spec --color spec</pre>
+
+<h2 id="label-Contrib">Contrib<span><a href="#label-Contrib">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>Feel free to fork and request a pull, or submit a ticket <a
+href="http://github.com/commander-rb/commander/issues">github.com/commander-rb/commander/issues</a></p>
+
+<h2 id="label-License">License<span><a href="#label-License">&para;</a> <a href="#top">&uarr;</a></span></h2>
+
+<p>This project is available under the MIT license. See <a
+href="LICENSE.html">LICENSE</a> for details.</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

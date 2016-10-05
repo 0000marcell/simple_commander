@@ -1,0 +1,66 @@
+#!/usr/bin/env ruby
+require 'byebug'
+require './lib/commander/import'
+
+
+program :name, 'ember-c'
+program :version, '0.0.1'
+program :description, 'implementing ember with modified commander'
+
+command :new do
+	syntax = 'ember-c new <name>'
+	summary = 'create a new ember project'
+	description = 'Create a new ember project'
+	action do |args, options|
+		puts args[0]
+		global
+	end
+end
+
+
+command :this do
+	command :is do
+		command :ok do
+			command :dont do
+				command :worry do
+					action do
+						puts "this is ok dont worry"
+					end
+				end
+			end
+
+			command :also do
+				action do
+					puts "this is ok also"
+				end
+			end
+		end
+	end
+end
+
+command :parent do
+	command :child do
+		action do |args, options|
+			puts 'nested child'	
+		end
+	end	
+end
+
+command 'do this' do
+	action do |args, options|
+		puts "do this!"
+	end
+end
+
+# new spec
+#command :deploy do
+#	helpers :io, :http
+#
+#	command :heroku do
+#		actions_ext './deploy/heroku'
+#	end
+#
+#	command :s3 do
+#		actions_ext './deploy/s3'
+#	end
+#end

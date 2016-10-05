@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>History - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+<div class="nav-section">
+  <h3>Table of Contents</h3>
+
+  <ul class="link-list" role="directory">
+    <li><a href="#label-4.4.0+-2F+2016-02-19">4.4.0 / 2016-02-19</a>
+    <li><a href="#label-4.3.8+-2F+2016-02-09">4.3.8 / 2016-02-09</a>
+    <li><a href="#label-4.3.7+-2F+2016-01-26">4.3.7 / 2016-01-26</a>
+    <li><a href="#label-4.3.6+-2F+2016-01-26+-5BYANKED-5D">4.3.6 / 2016-01-26 [YANKED]</a>
+    <li><a href="#label-4.3.5+-2F+2015-08-09">4.3.5 / 2015-08-09</a>
+    <li><a href="#label-4.3.4+-2F+2015-05-03">4.3.4 / 2015-05-03</a>
+    <li><a href="#label-4.3.3+-2F+2015-04-21">4.3.3 / 2015-04-21</a>
+    <li><a href="#label-4.3.2+-2F+2015-03-31">4.3.2 / 2015-03-31</a>
+    <li><a href="#label-4.3.1+-2F+2015-03-27">4.3.1 / 2015-03-27</a>
+    <li><a href="#label-4.3.0+-2F+2015-02-07">4.3.0 / 2015-02-07</a>
+    <li><a href="#label-4.2.1+-2F+2014-09-28">4.2.1 / 2014-09-28</a>
+    <li><a href="#label-4.2.0+-2F+2014-04-29">4.2.0 / 2014-04-29</a>
+    <li><a href="#label-4.1.6+-2F+2014-02-11">4.1.6 / 2014-02-11</a>
+    <li><a href="#label-4.1.5+-2F+2013-08-11">4.1.5 / 2013-08-11</a>
+    <li><a href="#label-4.1.4+-2F+2013-07-21">4.1.4 / 2013-07-21</a>
+    <li><a href="#label-4.1.3+-2F+2012-12-15">4.1.3 / 2012-12-15</a>
+    <li><a href="#label-4.1.2+-2F+2012-02-17">4.1.2 / 2012-02-17</a>
+    <li><a href="#label-4.1.1+-2F+2012-02-16">4.1.1 / 2012-02-16</a>
+    <li><a href="#label-4.1.0+-2F+2012-02-12">4.1.0 / 2012-02-12</a>
+    <li><a href="#label-4.0.7+-2F+2012-01-23">4.0.7 / 2012-01-23</a>
+    <li><a href="#label-4.0.6+-2F+2011-09-15">4.0.6 / 2011-09-15</a>
+    <li><a href="#label-4.0.5+-2F+2011-08-09">4.0.5 / 2011-08-09</a>
+    <li><a href="#label-4.0.4+-2F+2011-04-04">4.0.4 / 2011-04-04</a>
+    <li><a href="#label-4.0.3+-2F+2010-04-06">4.0.3 / 2010-04-06</a>
+    <li><a href="#label-4.0.2+-2F+2010-01-19">4.0.2 / 2010-01-19</a>
+    <li><a href="#label-4.0.1+-2F+2010-01-14">4.0.1 / 2010-01-14</a>
+    <li><a href="#label-4.0.0+-2F+2009-10-10">4.0.0 / 2009-10-10</a>
+    <li><a href="#label-3.3.0+-2F+2009-05-12">3.3.0 / 2009-05-12</a>
+    <li><a href="#label-3.2.9+-2F+2009-04-09">3.2.9 / 2009-04-09</a>
+    <li><a href="#label-3.2.8+-2F+2009-04-09">3.2.8 / 2009-04-09</a>
+    <li><a href="#label-3.2.7+-2F+2009-04-08">3.2.7 / 2009-04-08</a>
+    <li><a href="#label-3.2.6+-2F+2009-04-08">3.2.6 / 2009-04-08</a>
+    <li><a href="#label-3.2.5+-2F+2009-04-02">3.2.5 / 2009-04-02</a>
+    <li><a href="#label-3.2.4+-2F+2009-04-02">3.2.4 / 2009-04-02</a>
+    <li><a href="#label-3.2.3+-2F+2009-04-01">3.2.3 / 2009-04-01</a>
+    <li><a href="#label-3.2.2+-2F+2009-04-01">3.2.2 / 2009-04-01</a>
+    <li><a href="#label-3.2.1+-2F+2009-04-01">3.2.1 / 2009-04-01</a>
+    <li><a href="#label-3.2.0+-2F+2009-03-26">3.2.0 / 2009-03-26</a>
+    <li><a href="#label-3.1.8+-2F+2009-03-25">3.1.8 / 2009-03-25</a>
+    <li><a href="#label-3.1.7+-2F+2009-03-24">3.1.7 / 2009-03-24</a>
+    <li><a href="#label-3.1.6+-2F+2009-03-22">3.1.6 / 2009-03-22</a>
+    <li><a href="#label-3.1.5+-2F+2009-03-22">3.1.5 / 2009-03-22</a>
+    <li><a href="#label-3.1.4+-2F+2009-03-20">3.1.4 / 2009-03-20</a>
+    <li><a href="#label-3.1.3+-2F+2009-03-20">3.1.3 / 2009-03-20</a>
+    <li><a href="#label-3.1.2+-2F+2009-03-16">3.1.2 / 2009-03-16</a>
+    <li><a href="#label-3.1.1+-2F+2009-03-13">3.1.1 / 2009-03-13</a>
+    <li><a href="#label-3.1.0+-2F+2009-03-13">3.1.0 / 2009-03-13</a>
+    <li><a href="#label-3.0.3+-2F+2009-03-12">3.0.3 / 2009-03-12</a>
+    <li><a href="#label-3.0.2+-2F+2009-03-12">3.0.2 / 2009-03-12</a>
+    <li><a href="#label-3.0.1+-2F+2009-03-12">3.0.1 / 2009-03-12</a>
+    <li><a href="#label-3.0.0+-2F+2009-03-12">3.0.0 / 2009-03-12</a>
+    <li><a href="#label-2.5.7+-2F+2009-03-11">2.5.7 / 2009-03-11</a>
+    <li><a href="#label-2.5.6+-2F+2009-03-06">2.5.6 / 2009-03-06</a>
+    <li><a href="#label-2.4.5+-2F+2009-03-03">2.4.5 / 2009-03-03</a>
+    <li><a href="#label-2.4.4+-2F+2009-01-15">2.4.4 / 2009-01-15</a>
+    <li><a href="#label-2.4.3+-2F+2009-01-15">2.4.3 / 2009-01-15</a>
+    <li><a href="#label-2.4.2+-2F+2009-01-12">2.4.2 / 2009-01-12</a>
+    <li><a href="#label-2.4.1+-2F+2009-01-11">2.4.1 / 2009-01-11</a>
+    <li><a href="#label-2.3.0+-2F+2008-12-16">2.3.0 / 2008-12-16</a>
+    <li><a href="#label-2.2.1+-2F+2008-12-09">2.2.1 / 2008-12-09</a>
+    <li><a href="#label-2.2.0+-2F+2008-12-09">2.2.0 / 2008-12-09</a>
+    <li><a href="#label-2.1.1+-2F+2008-12-01">2.1.1 / 2008-12-01</a>
+    <li><a href="#label-2.1.0+-2F+2008-12-01">2.1.0 / 2008-12-01</a>
+    <li><a href="#label-2.0.1+-2F+2008-11-24">2.0.1 / 2008-11-24</a>
+    <li><a href="#label-2.0.0+-2F+2008-11-24">2.0.0 / 2008-11-24</a>
+    <li><a href="#label-1.2.2+-2F+2008-11-06">1.2.2 / 2008-11-06</a>
+    <li><a href="#label-1.2.0+-2F+2008-11-06">1.2.0 / 2008-11-06</a>
+    <li><a href="#label-1.1.0+-2F+2008-11-06">1.1.0 / 2008-11-06</a>
+    <li><a href="#label-1.0.4+-2F+2008-11-04">1.0.4 / 2008-11-04</a>
+    <li><a href="#label-1.0.3+-2F+2008-11-01">1.0.3 / 2008-11-01</a>
+    <li><a href="#label-1.0.2+-2F+2008-11-01">1.0.2 / 2008-11-01</a>
+    <li><a href="#label-1.0.1+-2F+2008-10-31">1.0.1 / 2008-10-31</a>
+    <li><a href="#label-1.0.0+-2F+2008-10-31">1.0.0 / 2008-10-31</a>
+  </ul>
+</div>
+
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./DEVELOPMENT.html">DEVELOPMENT</a>
+  
+    <li><a href="./Gemfile.html">Gemfile</a>
+  
+    <li><a href="./History_rdoc.html">History</a>
+  
+    <li><a href="./LICENSE.html">LICENSE</a>
+  
+    <li><a href="./Manifest.html">Manifest</a>
+  
+    <li><a href="./README_md.html">README</a>
+  
+    <li><a href="./Rakefile.html">Rakefile</a>
+  
+    <li><a href="./commander_gemspec.html">commander.gemspec</a>
+  
+    <li><a href="./coverage/assets/0_10_0/application_css.html">application.css</a>
+  
+    <li><a href="./coverage/assets/0_10_0/application_js.html">application.js</a>
+  
+    <li><a href="./coverage/index_html.html">index.html</a>
+  
+    <li><a href="./notes.html">notes</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page History.rdoc">
+
+<h3 id="label-4.4.0+-2F+2016-02-19">4.4.0 / 2016-02-19<span><a href="#label-4.4.0+-2F+2016-02-19">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Add modular style template initialization. (@lebogan)</p>
+</li><li>
+<p>Allow option names that start with a global option name.</p>
+</li><li>
+<p>Fix handling of negatable global flags. (@mfurtak)</p>
+</li></ul>
+
+<h3 id="label-4.3.8+-2F+2016-02-09">4.3.8 / 2016-02-09<span><a href="#label-4.3.8+-2F+2016-02-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fix regression for deprecation warnings.</p>
+</li></ul>
+
+<h3 id="label-4.3.7+-2F+2016-01-26">4.3.7 / 2016-01-26<span><a href="#label-4.3.7+-2F+2016-01-26">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fix regression in help formatter introduced in 4.3.6.</p>
+</li></ul>
+
+<h3 id="label-4.3.6+-2F+2016-01-26+-5BYANKED-5D">4.3.6 / 2016-01-26 [YANKED]<span><a href="#label-4.3.6+-2F+2016-01-26+-5BYANKED-5D">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fix deprecation warnings on Ruby 2.3.0.</p>
+</li><li>
+<p>Indent option descriptions the same way as program and command
+descriptions. (@badeball)</p>
+</li></ul>
+
+<h3 id="label-4.3.5+-2F+2015-08-09">4.3.5 / 2015-08-09<span><a href="#label-4.3.5+-2F+2015-08-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed a bug with small terminal widths, changed minimum screen width for
+wrapping to 40 columns. (@toolmantim)</p>
+</li></ul>
+
+<h3 id="label-4.3.4+-2F+2015-05-03">4.3.4 / 2015-05-03<span><a href="#label-4.3.4+-2F+2015-05-03">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed a regression with the compact help formatter.</p>
+</li></ul>
+
+<h3 id="label-4.3.3+-2F+2015-04-21">4.3.3 / 2015-04-21<span><a href="#label-4.3.3+-2F+2015-04-21">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Updated to highline 1.7.2 to fix a regression with terminal size (<a
+href="https://github.com/JEG2/highline/pull/139">github.com/JEG2/highline/pull/139</a>).</p>
+</li><li>
+<p>Help formatting updated to look better for commands with long names.
+(@jszwedko)</p>
+</li></ul>
+
+<h3 id="label-4.3.2+-2F+2015-03-31">4.3.2 / 2015-03-31<span><a href="#label-4.3.2+-2F+2015-03-31">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Version bump to publish new location of <a
+href="Commander.html">Commander</a> to Rubygems. Moved to <a
+href="https://github.com/commander-rb/commander">github.com/commander-rb/commander</a></p>
+</li></ul>
+
+<h3 id="label-4.3.1+-2F+2015-03-27">4.3.1 / 2015-03-27<span><a href="#label-4.3.1+-2F+2015-03-27">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fix various Ruby warnings for circular requires, etc.</p>
+</li><li>
+<p>Update to use highline 1.7 (@SkyTrix)</p>
+</li></ul>
+
+<h3 id="label-4.3.0+-2F+2015-02-07">4.3.0 / 2015-02-07<span><a href="#label-4.3.0+-2F+2015-02-07">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Drops support for Ruby 1.8. Please use 4.2.1 if you still need Ruby 1.8
+compatibility.</p>
+</li><li>
+<p>Fixed a bug with `always_trace` (#91) (@KrauseFx)</p>
+</li><li>
+<p>Renamed `commands` to `defined_commands` for better compatibility with Pry</p>
+</li></ul>
+
+<h3 id="label-4.2.1+-2F+2014-09-28">4.2.1 / 2014-09-28<span><a href="#label-4.2.1+-2F+2014-09-28">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Improve `choose` compatibility with HighLine&#39;s version (#79)</p>
+</li></ul>
+
+<h3 id="label-4.2.0+-2F+2014-04-29">4.2.0 / 2014-04-29<span><a href="#label-4.2.0+-2F+2014-04-29">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Add ability to use commander without importing into the global namespace
+(#61) (@krissi)</p>
+</li></ul>
+
+<h3 id="label-4.1.6+-2F+2014-02-11">4.1.6 / 2014-02-11<span><a href="#label-4.1.6+-2F+2014-02-11">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Respect environment setting for $LESS (@ellemenno)</p>
+</li><li>
+<p>Add ability to hide trace flags and globally enable tracing (#16, #17)
+(@jamesrwhite)</p>
+</li></ul>
+
+<h3 id="label-4.1.5+-2F+2013-08-11">4.1.5 / 2013-08-11<span><a href="#label-4.1.5+-2F+2013-08-11">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Prevent deprecation warning when loaded in a Rails 4 environment (#58)</p>
+</li></ul>
+
+<h3 id="label-4.1.4+-2F+2013-07-21">4.1.4 / 2013-07-21<span><a href="#label-4.1.4+-2F+2013-07-21">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Improve help formatting for multiline program and command descriptions</p>
+</li><li>
+<p>Add ability to set speaking rate (@kethomassen)</p>
+</li><li>
+<p>Clean up examples in docs (@parkr)</p>
+</li></ul>
+
+<h3 id="label-4.1.3+-2F+2012-12-15">4.1.3 / 2012-12-15<span><a href="#label-4.1.3+-2F+2012-12-15">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Remove use of eval in <a href="Array.html#method-c-parse">Array.parse</a></p>
+</li><li>
+<p>Make generated template executable and set better defaults (@suan)</p>
+</li><li>
+<p>Fixed valid_command_names_from to match exact commands only (@fgalassi)</p>
+</li></ul>
+
+<h3 id="label-4.1.2+-2F+2012-02-17">4.1.2 / 2012-02-17<span><a href="#label-4.1.2+-2F+2012-02-17">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Improvement to `ask_editor` to be more portable across *nix variants.
+(thanks to Federico Galassi)</p>
+</li></ul>
+
+<h3 id="label-4.1.1+-2F+2012-02-16">4.1.1 / 2012-02-16<span><a href="#label-4.1.1+-2F+2012-02-16">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Update `ask_editor` to work with any *nix editor - emacs, vim, etc. (thanks
+to Federico Galassi)</p>
+</li></ul>
+
+<h3 id="label-4.1.0+-2F+2012-02-12">4.1.0 / 2012-02-12<span><a href="#label-4.1.0+-2F+2012-02-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Update highline dependency.</p>
+</li><li>
+<p>Make optional arguments true when present (issue #2).</p>
+</li></ul>
+
+<h3 id="label-4.0.7+-2F+2012-01-23">4.0.7 / 2012-01-23<span><a href="#label-4.0.7+-2F+2012-01-23">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Improved support for JRuby and Windows (and any other platforms that
+don&#39;t support Kernel.fork).</p>
+</li><li>
+<p>Fixed bug #33 - support `–help` after commands.</p>
+</li><li>
+<p>Reorganized help output to display synopsis before description (issue #12).</p>
+</li></ul>
+
+<h3 id="label-4.0.6+-2F+2011-09-15">4.0.6 / 2011-09-15<span><a href="#label-4.0.6+-2F+2011-09-15">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Improved load time on Ruby 1.9. (thanks to Jonathon M. Abbott)</p>
+</li><li>
+<p>Updated documentation.</p>
+</li></ul>
+
+<h3 id="label-4.0.5+-2F+2011-08-09">4.0.5 / 2011-08-09<span><a href="#label-4.0.5+-2F+2011-08-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Updated documentation to fix inaccuracies and unclear information.</p>
+</li><li>
+<p>Improved rake tasks for gem development.</p>
+</li><li>
+<p>Added say_ok, say_warning and say_error methods to print messages in green,
+yellow or red. (thanks to Simon Courtois)</p>
+</li><li>
+<p>Fixed; Allow global options to be passed in any order, even mixed with
+command options. (thanks to Rich Grundy)</p>
+</li><li>
+<p>Fixed; Global options can be passed before or after the command, they can
+even be mixed with command options. Closes #8. (thanks to Rich Grundy)</p>
+</li><li>
+<p>Fixed; Platform test should now correctly identify JRuby. (thanks to Justin
+Lynn)</p>
+</li><li>
+<p>Fixed; Add to_s to exceptions as option parser no longer does implicit
+conversion. (thanks to Justin Lynn)</p>
+</li></ul>
+
+<h3 id="label-4.0.4+-2F+2011-04-04">4.0.4 / 2011-04-04<span><a href="#label-4.0.4+-2F+2011-04-04">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed program(:key) behavior for non-Array keys like name, version,
+description under Ruby 1.9</p>
+</li><li>
+<p>All specs should pass under Ruby 1.9 now</p>
+</li></ul>
+
+<h3 id="label-4.0.3+-2F+2010-04-06">4.0.3 / 2010-04-06<span><a href="#label-4.0.3+-2F+2010-04-06">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed global_option which was consuming arguments when not expected. Closes
+#22</p>
+</li></ul>
+
+<h3 id="label-4.0.2+-2F+2010-01-19">4.0.2 / 2010-01-19<span><a href="#label-4.0.2+-2F+2010-01-19">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added program(:int_block) to allow a block to be run on interrupt.</p>
+</li><li>
+<p>Fixed; ProgressBar immediately shows, and doesn&#39;t die on empty lists.</p>
+</li></ul>
+
+<h3 id="label-4.0.1+-2F+2010-01-14">4.0.1 / 2010-01-14<span><a href="#label-4.0.1+-2F+2010-01-14">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed commander when using JRuby</p>
+</li><li>
+<p>Fixed template; should require “commander/import”</p>
+</li></ul>
+
+<h3 id="label-4.0.0+-2F+2009-10-10">4.0.0 / 2009-10-10<span><a href="#label-4.0.0+-2F+2009-10-10">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Changed; Aliased when_called as action [#9]</p>
+</li><li>
+<p>Changed; Sort commands and aliases alphabetically.</p>
+</li><li>
+<p>Changed; Sort aliases alphabetically</p>
+</li><li>
+<p>Changed; Sort commands alphabetically.</p>
+</li><li>
+<p>Changed; require user to require &#39;commander/import&#39; for dsl</p>
+</li><li>
+<p>Fixed broken regexp; Changed :int_message, only traps INT when available</p>
+</li><li>
+<p>Fixed Ruby 1.9 warning caused by removing object_id from <a
+href="Object.html">Object</a></p>
+</li><li>
+<p>Removed eval const hack</p>
+</li><li>
+<p>Moving to Gemcutter (GRRRR Github)</p>
+</li></ul>
+
+<h3 id="label-3.3.0+-2F+2009-05-12">3.3.0 / 2009-05-12<span><a href="#label-3.3.0+-2F+2009-05-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added choose</p>
+</li><li>
+<p>Added aliasing for help formatters [#24]</p>
+</li><li>
+<p>Added UI.replace_tokens</p>
+</li><li>
+<p>Added converse</p>
+</li><li>
+<p>Added speak</p>
+</li><li>
+<p>Added applescript</p>
+</li><li>
+<p>Added reset_io</p>
+</li><li>
+<p>Added io</p>
+</li><li>
+<p>Removed String#tokenize</p>
+</li><li>
+<p>Removed delete_switches</p>
+</li></ul>
+
+<h3 id="label-3.2.9+-2F+2009-04-09">3.2.9 / 2009-04-09<span><a href="#label-3.2.9+-2F+2009-04-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed bug in removal of global options</p>
+</li></ul>
+
+<h3 id="label-3.2.8+-2F+2009-04-09">3.2.8 / 2009-04-09<span><a href="#label-3.2.8+-2F+2009-04-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added auto-loading support of visionmedia-growl convenience methods when
+the gem is available</p>
+</li><li>
+<p>Changed; growl related methods are now part of visionmedia-growl</p>
+</li><li>
+<p>Fixed doc typos</p>
+</li></ul>
+
+<h3 id="label-3.2.7+-2F+2009-04-08">3.2.7 / 2009-04-08<span><a href="#label-3.2.7+-2F+2009-04-08">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added notify, notify_ok, notify_warning, notify_info and notify_error These
+methods all utilize the MacOS growlnotify binary, very cool stuff check it
+out!</p>
+</li></ul>
+
+<h3 id="label-3.2.6+-2F+2009-04-08">3.2.6 / 2009-04-08<span><a href="#label-3.2.6+-2F+2009-04-08">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added <a
+href="Commander/UI/AskForClass.html">Commander::UI::AskForClass</a></p>
+</li><li>
+<p>Added support to remove_global_options for options with arguments</p>
+</li><li>
+<p>Removed .re directory used for visionmedia-release</p>
+</li><li>
+<p>Fixed bug preventing –trace from working</p>
+</li></ul>
+
+<h3 id="label-3.2.5+-2F+2009-04-02">3.2.5 / 2009-04-02<span><a href="#label-3.2.5+-2F+2009-04-02">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added ask_editor</p>
+</li></ul>
+
+<h3 id="label-3.2.4+-2F+2009-04-02">3.2.4 / 2009-04-02<span><a href="#label-3.2.4+-2F+2009-04-02">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added enable_paging [#9]</p>
+</li></ul>
+
+<h3 id="label-3.2.3+-2F+2009-04-01">3.2.3 / 2009-04-01<span><a href="#label-3.2.3+-2F+2009-04-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added new pager using less [#9]</p>
+</li></ul>
+
+<h3 id="label-3.2.2+-2F+2009-04-01">3.2.2 / 2009-04-01<span><a href="#label-3.2.2+-2F+2009-04-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Github&#39;s gem builder timed out ? …</p>
+</li></ul>
+
+<h3 id="label-3.2.1+-2F+2009-04-01">3.2.1 / 2009-04-01<span><a href="#label-3.2.1+-2F+2009-04-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added <a
+href="Commander/HelpFormatter/TerminalCompact.html">Commander::HelpFormatter::TerminalCompact</a></p>
+</li><li>
+<p>Fix; updated gemspec / manifest removing test/* causing issue [#26]</p>
+</li></ul>
+
+<h3 id="label-3.2.0+-2F+2009-03-26">3.2.0 / 2009-03-26<span><a href="#label-3.2.0+-2F+2009-03-26">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added implied small switches so they appear in help (-h, -v, etc)</p>
+</li><li>
+<p>Added inspect back to <a
+href="Commander/Command/Options.html">Commander::Command::Options</a> [#1]</p>
+</li><li>
+<p>Added inheritance of global options for commands [#7]</p>
+</li><li>
+<p>Added require_valid_command</p>
+</li><li>
+<p>Renamed call_active_command to run_active_command</p>
+</li><li>
+<p>Changed; using same option format as command options for globals [#18]</p>
+</li><li>
+<p>Changed; program :name is now optional, and is auto-defined when not
+specified [#21]</p>
+</li><li>
+<p>Moved switch_to_sym from Command to <a
+href="Commander/Runner.html">Commander::Runner</a></p>
+</li><li>
+<p>Moved separate_switches_from_description into <a
+href="Commander/Runner.html">Commander::Runner</a> [#22]</p>
+</li><li>
+<p>Removed program :name from commander init template since its not required
+anymore</p>
+</li></ul>
+
+<h3 id="label-3.1.8+-2F+2009-03-25">3.1.8 / 2009-03-25<span><a href="#label-3.1.8+-2F+2009-03-25">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Utilizing abort and $stderr instead of using say [#16]</p>
+</li><li>
+<p>Fixed INT trapping issue (purely cosmetic) [#14]</p>
+</li><li>
+<p>Removed todo, use lighthouse now for commander at: <a
+href="http://visionmedia.lighthouseapp.com/projects/27643-commander/overview">visionmedia.lighthouseapp.com/projects/27643-commander/overview</a></p>
+</li></ul>
+
+<h3 id="label-3.1.7+-2F+2009-03-24">3.1.7 / 2009-03-24<span><a href="#label-3.1.7+-2F+2009-03-24">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added global –trace option</p>
+</li></ul>
+
+<h3 id="label-3.1.6+-2F+2009-03-22">3.1.6 / 2009-03-22<span><a href="#label-3.1.6+-2F+2009-03-22">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Changed Options struct to always use symbols</p>
+</li></ul>
+
+<h3 id="label-3.1.5+-2F+2009-03-22">3.1.5 / 2009-03-22<span><a href="#label-3.1.5+-2F+2009-03-22">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added Options#__hash__ to access the internal hash table</p>
+</li><li>
+<p>Refactored Options struct to function much like an OpenStruct</p>
+</li><li>
+<p>Updated commander exec init help description</p>
+</li></ul>
+
+<h3 id="label-3.1.4+-2F+2009-03-20">3.1.4 / 2009-03-20<span><a href="#label-3.1.4+-2F+2009-03-20">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Gemspec typo</p>
+</li></ul>
+
+<h3 id="label-3.1.3+-2F+2009-03-20">3.1.3 / 2009-03-20<span><a href="#label-3.1.3+-2F+2009-03-20">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added remove_global_options</p>
+</li><li>
+<p>Added core global option descriptions</p>
+</li><li>
+<p>Added display of global options</p>
+</li><li>
+<p>Removed small core switches (-v, -h) because they are implicitly set</p>
+</li><li>
+<p>Fixed issue with option switchs failing when named as common methods like
+–send, or –password</p>
+</li><li>
+<p>Fixed bug causing InvalidOption error when global options do not abort the
+process. This was due to these options remaining in the arguments array, in
+turn being parsed by the command&#39;s option parser, issuing the error.
+This is fixed by remove_global_options.</p>
+</li></ul>
+
+<h3 id="label-3.1.2+-2F+2009-03-16">3.1.2 / 2009-03-16<span><a href="#label-3.1.2+-2F+2009-03-16">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added support for global options via global_option</p>
+</li><li>
+<p>Added call_active_command and say to clean things up internally</p>
+</li><li>
+<p>Misc refactoring</p>
+</li></ul>
+
+<h3 id="label-3.1.1+-2F+2009-03-13">3.1.1 / 2009-03-13<span><a href="#label-3.1.1+-2F+2009-03-13">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed some terminal formatter spacing issues</p>
+</li></ul>
+
+<h3 id="label-3.1.0+-2F+2009-03-13">3.1.0 / 2009-03-13<span><a href="#label-3.1.0+-2F+2009-03-13">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added Command#inspect</p>
+</li><li>
+<p>Added displaying of aliases in global help</p>
+</li><li>
+<p>Added support for alias args</p>
+</li><li>
+<p>Added default_command</p>
+</li></ul>
+
+<h3 id="label-3.0.3+-2F+2009-03-12">3.0.3 / 2009-03-12<span><a href="#label-3.0.3+-2F+2009-03-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added alias_command</p>
+</li></ul>
+
+<h3 id="label-3.0.2+-2F+2009-03-12">3.0.2 / 2009-03-12<span><a href="#label-3.0.2+-2F+2009-03-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added terminal formatter specs</p>
+</li><li>
+<p>Fixed bug preventing command names passed to help from working</p>
+</li></ul>
+
+<h3 id="label-3.0.1+-2F+2009-03-12">3.0.1 / 2009-03-12<span><a href="#label-3.0.1+-2F+2009-03-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed bug in command_name_from_args preventing the left-most match for a
+command name to be used</p>
+</li><li>
+<p>Fixed bug in Command#example preventing the formatter from outputting them
+correctly</p>
+</li></ul>
+
+<h3 id="label-3.0.0+-2F+2009-03-12">3.0.0 / 2009-03-12<span><a href="#label-3.0.0+-2F+2009-03-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added sub command help support when using the –help switch</p>
+</li><li>
+<p>delete_switches is now mutative</p>
+</li><li>
+<p>Added valid_command_names_from</p>
+</li><li>
+<p>when_called now raises argument error when neither a block, object, or
+class is passed</p>
+</li><li>
+<p>Added options#default method and specs</p>
+</li><li>
+<p>Added support for multi-word list parsing in Array#parse</p>
+</li><li>
+<p>Added summary to commander template</p>
+</li><li>
+<p>Added optional block param for new_command_runner spec helper</p>
+</li><li>
+<p>Added .re (metadata for visionmedia-release gem)</p>
+</li><li>
+<p>Moved delgation of Kernel methods to <a href="Object.html">Object</a></p>
+</li><li>
+<p>Refactored multi-word command name specs</p>
+</li><li>
+<p>Refactored Object#method_missing; using call chain to implement</p>
+</li><li>
+<p>Refactored all specs</p>
+</li><li>
+<p>Change color calls in formatters to $terminal#color for now</p>
+</li><li>
+<p>Using highlines $terminal.output for IO stream with the progressbar</p>
+</li><li>
+<p>Replaced ensure_program_key_set with require_program, taking an array of
+keys</p>
+</li><li>
+<p>Renamed args_without_command to args_without_command_name</p>
+</li><li>
+<p>Renamed populate_options_to_when_called to option_proc</p>
+</li><li>
+<p>Renamed sym_from_switch to switch_to_sym</p>
+</li><li>
+<p>Removed get_command, use command without supplying a block</p>
+</li><li>
+<p>Removed Command#inspect</p>
+</li><li>
+<p>Removed command description aliases of short_description, long_description.
+Use description / summary</p>
+</li><li>
+<p>Removed VerboseFileUtils</p>
+</li><li>
+<p>Removed String#camelcase as its not really needed (was only used in
+commander&#39;s executable for creating templates)</p>
+</li><li>
+<p>Removed commander/import for now</p>
+</li><li>
+<p>Removed LOG_FORMAT</p>
+</li><li>
+<p>Removed Kernel ext which only had color</p>
+</li></ul>
+
+<h3 id="label-2.5.7+-2F+2009-03-11">2.5.7 / 2009-03-11<span><a href="#label-2.5.7+-2F+2009-03-11">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed paren warnings in import spec</p>
+</li><li>
+<p>Fixed Kernel#method_missing to preserve its original behavior (Raise errors
+for missing methods or variables)</p>
+</li></ul>
+
+<h3 id="label-2.5.6+-2F+2009-03-06">2.5.6 / 2009-03-06<span><a href="#label-2.5.6+-2F+2009-03-06">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Replaced Commander::VERSION::STRING with Commander::VERSION (for release
+gem)</p>
+</li><li>
+<p>Refactored progress bar</p>
+</li><li>
+<p>Fixed String#tokenize</p>
+</li></ul>
+
+<h3 id="label-2.4.5+-2F+2009-03-03">2.4.5 / 2009-03-03<span><a href="#label-2.4.5+-2F+2009-03-03">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed bug which was not allowing switch arguments which are strings such as
+–eval &#39;something here&#39;</p>
+</li></ul>
+
+<h3 id="label-2.4.4+-2F+2009-01-15">2.4.4 / 2009-01-15<span><a href="#label-2.4.4+-2F+2009-01-15">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed bug which was not allowing multi-word commands to view help</p>
+</li></ul>
+
+<h3 id="label-2.4.3+-2F+2009-01-15">2.4.3 / 2009-01-15<span><a href="#label-2.4.3+-2F+2009-01-15">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed bug in command_name_from_args, preventing multi-word commands</p>
+</li></ul>
+
+<h3 id="label-2.4.2+-2F+2009-01-12">2.4.2 / 2009-01-12<span><a href="#label-2.4.2+-2F+2009-01-12">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Github! build me!</p>
+</li></ul>
+
+<h3 id="label-2.4.1+-2F+2009-01-11">2.4.1 / 2009-01-11<span><a href="#label-2.4.1+-2F+2009-01-11">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added ask_for_CLASS, which may be any class name such as ask_for_date,
+ask_for_array, etc</p>
+</li><li>
+<p>Changed doc to *.rdoc for pretty markup on github</p>
+</li></ul>
+
+<h3 id="label-2.3.0+-2F+2008-12-16">2.3.0 / 2008-12-16<span><a href="#label-2.3.0+-2F+2008-12-16">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Removed input, output in favour of HighLines $terminal</p>
+</li><li>
+<p>Autoloading terminal formatter since it may not always be used</p>
+</li><li>
+<p>Added wrapping of text with 10 padding, defaults to 80</p>
+</li><li>
+<p>Added friendly interruption message by default, overridable with trap or
+int_message</p>
+</li><li>
+<p>Fixed description now showing as summary when no summary is available</p>
+</li></ul>
+
+<h3 id="label-2.2.1+-2F+2008-12-09">2.2.1 / 2008-12-09<span><a href="#label-2.2.1+-2F+2008-12-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed typo in String#tokenize, preventing progress bar from working</p>
+</li><li>
+<p>Fixed some small formatting issues with help output</p>
+</li></ul>
+
+<h3 id="label-2.2.0+-2F+2008-12-09">2.2.0 / 2008-12-09<span><a href="#label-2.2.0+-2F+2008-12-09">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Additional documentation</p>
+</li><li>
+<p>Added support for arbitrary help &#39;blocks&#39; using program :help,
+&#39;Your block&#39;, &#39;Your blocks contents&#39;</p>
+</li><li>
+<p>Added support for description, summary, short_description, and
+large_description, which are displaying conditionally within help docs</p>
+</li><li>
+<p>Allowing uncaught exceptions to reach stderr, for debugging purposes</p>
+</li></ul>
+
+<h3 id="label-2.1.1+-2F+2008-12-01">2.1.1 / 2008-12-01<span><a href="#label-2.1.1+-2F+2008-12-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Changed password, now requires that the user must enter a non-empty? value</p>
+</li></ul>
+
+<h3 id="label-2.1.0+-2F+2008-12-01">2.1.0 / 2008-12-01<span><a href="#label-2.1.0+-2F+2008-12-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added progress bar</p>
+</li><li>
+<p>Added auto-inclusion of FileUtils module</p>
+</li><li>
+<p>Added stdout logging method</p>
+</li><li>
+<p>Fixed issue with options placed before command</p>
+</li></ul>
+
+<h3 id="label-2.0.1+-2F+2008-11-24">2.0.1 / 2008-11-24<span><a href="#label-2.0.1+-2F+2008-11-24">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Fixed new line after command options</p>
+</li><li>
+<p>Fixed padding for command list</p>
+</li></ul>
+
+<h3 id="label-2.0.0+-2F+2008-11-24">2.0.0 / 2008-11-24<span><a href="#label-2.0.0+-2F+2008-11-24">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Rewrite of entire gem</p>
+</li><li>
+<p>Added auto-parsing and struct population of options</p>
+</li><li>
+<p>Added better documentation</p>
+</li></ul>
+
+<h3 id="label-1.2.2+-2F+2008-11-06">1.2.2 / 2008-11-06<span><a href="#label-1.2.2+-2F+2008-11-06">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Forgot to add array.rb</p>
+</li></ul>
+
+<h3 id="label-1.2.0+-2F+2008-11-06">1.2.0 / 2008-11-06<span><a href="#label-1.2.0+-2F+2008-11-06">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added paging ability (similar to &#39;less&#39;)</p>
+</li><li>
+<p>Added coloring to default help generator</p>
+</li></ul>
+
+<h3 id="label-1.1.0+-2F+2008-11-06">1.1.0 / 2008-11-06<span><a href="#label-1.1.0+-2F+2008-11-06">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added dependency for Highline gem, which replaces Commander&#39;s user
+interaction lib</p>
+</li></ul>
+
+<h3 id="label-1.0.4+-2F+2008-11-04">1.0.4 / 2008-11-04<span><a href="#label-1.0.4+-2F+2008-11-04">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added support for –help and –version flags</p>
+</li></ul>
+
+<h3 id="label-1.0.3+-2F+2008-11-01">1.0.3 / 2008-11-01<span><a href="#label-1.0.3+-2F+2008-11-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Typo causing the gem to fail build on github</p>
+</li></ul>
+
+<h3 id="label-1.0.2+-2F+2008-11-01">1.0.2 / 2008-11-01<span><a href="#label-1.0.2+-2F+2008-11-01">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added gemspec for github</p>
+</li></ul>
+
+<h3 id="label-1.0.1+-2F+2008-10-31">1.0.1 / 2008-10-31<span><a href="#label-1.0.1+-2F+2008-10-31">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Added shebang line to commander init</p>
+</li><li>
+<p>Added require &#39;rubygems&#39;</p>
+</li></ul>
+
+<h3 id="label-1.0.0+-2F+2008-10-31">1.0.0 / 2008-10-31<span><a href="#label-1.0.0+-2F+2008-10-31">&para;</a> <a href="#top">&uarr;</a></span></h3>
+<ul><li>
+<p>Initial release</p>
+</li></ul>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

@@ -1,8 +1,0 @@
-highline: ask, say
-slop: option parser
-trollop: option parser
-cocaine: transform commands in the path in executable blocks of code 
-mixlib-cli: another option parser	
-gli: the most similar project to what im trying to do
-methadone: is another option similar to gli but a lot simpler
-commander: also very similar to what im trying todo with lots of options

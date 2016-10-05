@@ -2,6 +2,7 @@
 require 'byebug'
 require './commander-altered/lib/commander/import'
 
+
 program :name, 'ember-c'
 program :version, '0.0.1'
 program :description, 'implementing ember with modified commander'
@@ -12,8 +13,10 @@ command :new do
 	description = 'Create a new ember project'
 	action do |args, options|
 		puts args[0]
+		global
 	end
 end
+
 
 command :this do
 	command :is do
