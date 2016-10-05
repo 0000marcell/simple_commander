@@ -1,5 +1,5 @@
 #--
-# Copyright (c) 2008-2009 TJ Holowaychuk <tj@vision-media.ca>
+# Copyright (c) 2016 Marcell Monteiro Cruz <marcellmonteiro.com>
 #
 # Permission is hereby granted, free of charge, to any person obtaining
 # a copy of this software and associated documentation files (the
@@ -22,14 +22,14 @@
 #++
 
 require 'highline/import'
-require 'commander/version'
-require 'commander/blank'
-require 'commander/user_interaction'
-require 'commander/core_ext'
-require_relative './commander/runner.rb'
-require_relative './commander/command'
-require 'commander/help_formatters'
-require 'commander/platform'
-require 'commander/delegates'
-require 'commander/methods'
-require 'commander/configure'
+require 'simple_commander/version'
+require 'simple_commander/blank'
+require 'simple_commander/user_interaction'
+require 'simple_commander/core_ext'
+require 'simple_commander/runner.rb'
+require 'simple_commander/command'
+require 'simple_commander/help_formatters'
+require 'simple_commander/platform'
+require 'simple_commander/delegates'
+require 'simple_commander/methods'
+require 'simple_commander/configure'

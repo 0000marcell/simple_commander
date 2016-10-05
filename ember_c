@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require 'byebug'
-require './lib/commander/import'
+require 'simple_commander/import'
 
 
 program :name, 'ember-c'

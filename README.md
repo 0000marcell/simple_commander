@@ -1,1 +1,1 @@
-# magni
+# Simple Commander

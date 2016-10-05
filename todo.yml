@@ -1,5 +1,7 @@
-create scommader cli which transform the script in an directory with helpers,
 create gem scommander
+add highline as a dependency on the gem
+change the name of the Commander module to SimpleCommander
+create scommader cli which transform the script in an directory with helpers,
 tests etc..
 add suport for helpers
 make syntax, options ect.. actually methods instead of variables
