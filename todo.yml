@@ -1,6 +1,7 @@
-add commander rspec tests and write tests for the new functionalities
-add highline as a dependency on the gem
-change the name of the Commander module to SimpleCommander
+add ci 
+add codeclimate
+add test coverage
+add logo to read and simple readme
 create scommader cli which transform the script in an directory with helpers,
 tests etc..
 add suport for helpers
@@ -14,6 +15,10 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+learn how to use rubocop
+change the name of the Commander module to SimpleCommander
+add highline as a dependency on the gem
+add commander rspec tests and write tests for the new functionalities
 create gem scommander
 make help default command work too
 add suport for nested commands

@@ -14,18 +14,18 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-06T11:57:33-03:00">2016-10-06T11:57:33-03:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-10-06T12:00:46-03:00">2016-10-06T12:00:46-03:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">62.42%</span></span>
+    (<span class="covered_percent"><span class="red">65.66%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.09
+         1.96
        </span>
     </span> hits/line)
   </h2>
@@ -33,8 +33,8 @@
   <div>
     <b>16</b> files in total.
     <b>463</b> relevant lines. 
-    <span class="green"><b>289</b> lines covered</span> and
-    <span class="red"><b>174</b> lines missed </span>
+    <span class="green"><b>304</b> lines covered</span> and
+    <span class="red"><b>159</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -77,7 +77,7 @@
         <td>58</td>
         <td>45</td>
         <td>13</td>
-        <td>1.4</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -132,32 +132,32 @@
       
       <tr>
         <td class="strong"><a href="#c8df7a3717318d1aff68e5eb101cc92b55f1957d" class="src_link" title="lib/simple_commander/help_formatters.rb">lib/simple_commander/help_formatters.rb</a></td>
-        <td class="red strong">61.54 %</td>
+        <td class="green strong">96.15 %</td>
         <td>49</td>
         <td>26</td>
-        <td>16</td>
-        <td>10</td>
-        <td>0.6</td>
+        <td>25</td>
+        <td>1</td>
+        <td>1.1</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#4f590e854ec7a50843bf06b6dcfef2a52c3bb7c6" class="src_link" title="lib/simple_commander/help_formatters/base.rb">lib/simple_commander/help_formatters/base.rb</a></td>
-        <td class="red strong">66.67 %</td>
+        <td class="red strong">77.78 %</td>
         <td>24</td>
         <td>9</td>
-        <td>6</td>
-        <td>3</td>
-        <td>0.7</td>
+        <td>7</td>
+        <td>2</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#a7be1f879d09f3006b3382279d7e525631cb2fab" class="src_link" title="lib/simple_commander/help_formatters/terminal.rb">lib/simple_commander/help_formatters/terminal.rb</a></td>
-        <td class="red strong">70.0 %</td>
+        <td class="yellow strong">90.0 %</td>
         <td>19</td>
         <td>10</td>
-        <td>7</td>
-        <td>3</td>
-        <td>0.7</td>
+        <td>9</td>
+        <td>1</td>
+        <td>0.9</td>
       </tr>
       
       <tr>
@@ -192,12 +192,12 @@
       
       <tr>
         <td class="strong"><a href="#a26fb9b8f7cbb2e419455473ec4c28ef8bd883cd" class="src_link" title="lib/simple_commander/runner.rb">lib/simple_commander/runner.rb</a></td>
-        <td class="red strong">72.16 %</td>
+        <td class="red strong">73.86 %</td>
         <td>476</td>
         <td>176</td>
-        <td>127</td>
-        <td>49</td>
-        <td>2.0</td>
+        <td>130</td>
+        <td>46</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -804,14 +804,14 @@
           <code class="ruby">    def initialize(name)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="47">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="47">
+          <span class="hits">5</span>
           
           <code class="ruby">      @name, @examples, @when_called = name.to_s, [], []</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="48">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="48">
+          <span class="hits">5</span>
           
           <code class="ruby">      @options, @proxy_options = [], []</code>
         </li>
@@ -852,8 +852,8 @@
           <code class="ruby">		def has_no_action?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="55">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
           
           <code class="ruby">			if @when_called.empty? then true else false end</code>
         </li>
@@ -954,8 +954,8 @@
           <code class="ruby">    def example(description, command)</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="72">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="4" data-linenumber="72">
+          <span class="hits">4</span>
           
           <code class="ruby">      @examples &lt;&lt; [description, command]</code>
         </li>
@@ -1260,14 +1260,14 @@
           <code class="ruby">    def option(*args, &amp;block)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="123">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="123">
+          <span class="hits">1</span>
           
           <code class="ruby">      switches, description = Runner.separate_switches_from_description(*args)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="124">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="124">
+          <span class="hits">1</span>
           
           <code class="ruby">      proc = block || option_proc(switches)</code>
         </li>
@@ -1302,8 +1302,8 @@
           <code class="ruby">        description: description,</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="130">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="130">
+          <span class="hits">1</span>
           
           <code class="ruby">      }</code>
         </li>
@@ -1446,14 +1446,14 @@
           <code class="ruby">    def when_called(*args, &amp;block)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="154">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="154">
+          <span class="hits">2</span>
           
           <code class="ruby">      fail ArgumentError, &#39;must pass an object, class, or block.&#39; if args.empty? &amp;&amp; !block</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="155">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="155">
+          <span class="hits">2</span>
           
           <code class="ruby">      @when_called = block ? [block] : args</code>
         </li>
@@ -1824,8 +1824,8 @@
           <code class="ruby">    def option_proc(switches)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="217">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="217">
+          <span class="hits">1</span>
           
           <code class="ruby">      -&gt;(value) { proxy_options &lt;&lt; [Runner.switch_to_sym(switches.last), value] }</code>
         </li>
@@ -2407,11 +2407,11 @@
         <div class="source_table" id="c8df7a3717318d1aff68e5eb101cc92b55f1957d">
   <div class="header">
     <h3>lib/simple_commander/help_formatters.rb</h3>
-    <h4><span class="red">61.54 %</span> covered</h4>
+    <h4><span class="green">96.15 %</span> covered</h4>
     <div>
       <b>26</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="green"><b>25</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -2466,8 +2466,8 @@
           <code class="ruby">      def initialize(target)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
           <code class="ruby">        @target = target</code>
         </li>
@@ -2490,14 +2490,14 @@
           <code class="ruby">      def get_binding</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
-          
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
           
           <code class="ruby">        @target.instance_eval { binding }.tap do |bind|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
-          
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
           
           <code class="ruby">          decorate_binding(bind)</code>
         </li>
@@ -2562,14 +2562,14 @@
           <code class="ruby">      def decorate_binding(bind)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="25">
-          
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
           
           <code class="ruby">        bind.eval(&quot;max_command_length = #{max_command_length(bind)}&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="26">
-          
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
           <code class="ruby">        bind.eval(&quot;max_aliases_length = #{max_aliases_length(bind)}&quot;)</code>
         </li>
@@ -2592,8 +2592,8 @@
           <code class="ruby">      def max_command_length(bind)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="30">
-          
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
           
           <code class="ruby">        max_key_length(bind.eval(&#39;@commands&#39;))</code>
         </li>
@@ -2616,8 +2616,8 @@
           <code class="ruby">      def max_aliases_length(bind)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
-          
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
           <code class="ruby">        max_key_length(bind.eval(&#39;@aliases&#39;))</code>
         </li>
@@ -2640,14 +2640,14 @@
           <code class="ruby">      def max_key_length(hash, default = 20)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="38">
-          
+        <li class="covered" data-hits="2" data-linenumber="38">
+          <span class="hits">2</span>
           
           <code class="ruby">        longest = hash.keys.max_by(&amp;:size)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="39">
-          
+        <li class="covered" data-hits="2" data-linenumber="39">
+          <span class="hits">2</span>
           
           <code class="ruby">        longest ? longest.size : default</code>
         </li>
@@ -2719,11 +2719,11 @@
         <div class="source_table" id="4f590e854ec7a50843bf06b6dcfef2a52c3bb7c6">
   <div class="header">
     <h3>lib/simple_commander/help_formatters/base.rb</h3>
-    <h4><span class="red">66.67 %</span> covered</h4>
+    <h4><span class="red">77.78 %</span> covered</h4>
     <div>
       <b>9</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -2796,8 +2796,8 @@
           <code class="ruby">      def initialize(runner)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="12">
-          
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
           
           <code class="ruby">        @runner = runner</code>
         </li>
@@ -2881,11 +2881,11 @@
         <div class="source_table" id="a7be1f879d09f3006b3382279d7e525631cb2fab">
   <div class="header">
     <h3>lib/simple_commander/help_formatters/terminal.rb</h3>
-    <h4><span class="red">70.0 %</span> covered</h4>
+    <h4><span class="yellow">90.0 %</span> covered</h4>
     <div>
       <b>10</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <span class="green"><b>9</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -2928,8 +2928,8 @@
           <code class="ruby">      def render</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
           
           <code class="ruby">        template(:help).result(ProgramContext.new(@runner).get_binding)</code>
         </li>
@@ -2976,8 +2976,8 @@
           <code class="ruby">      def template(name)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="15">
-          
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
           <code class="ruby">        ERB.new(File.read(File.join(File.dirname(__FILE__), &#39;terminal&#39;, &quot;#{name}.erb&quot;)), nil, &#39;-&#39;)</code>
         </li>
@@ -3241,11 +3241,11 @@
         <div class="source_table" id="a26fb9b8f7cbb2e419455473ec4c28ef8bd883cd">
   <div class="header">
     <h3>lib/simple_commander/runner.rb</h3>
-    <h4><span class="red">72.16 %</span> covered</h4>
+    <h4><span class="red">73.86 %</span> covered</h4>
     <div>
       <b>176</b> relevant lines. 
-      <span class="green"><b>127</b> lines covered</span> and
-      <span class="red"><b>49</b> lines missed.</span>
+      <span class="green"><b>130</b> lines covered</span> and
+      <span class="red"><b>46</b> lines missed.</span>
     </div>
   </div>
   
@@ -3438,38 +3438,38 @@
           <code class="ruby">    def initialize(args = ARGV)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="32">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="32">
+          <span class="hits">1</span>
           
           <code class="ruby">      @args, @commands, @aliases, @options = args, {}, {}, []</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="33">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
           
           <code class="ruby">      @help_formatter_aliases = help_formatter_alias_defaults</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="34">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="34">
+          <span class="hits">1</span>
           
           <code class="ruby">      @program = program_defaults</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="35">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="35">
+          <span class="hits">1</span>
           
           <code class="ruby">      @always_trace = false</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="36">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="36">
+          <span class="hits">1</span>
           
           <code class="ruby">      @never_trace = false</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="37">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="37">
+          <span class="hits">1</span>
           
           <code class="ruby">      create_default_commands</code>
         </li>
@@ -3510,8 +3510,8 @@
           <code class="ruby">    def self.instance</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="44">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="7" data-linenumber="44">
+          <span class="hits">7</span>
           
           <code class="ruby">      @singleton ||= new</code>
         </li>
@@ -3684,8 +3684,8 @@
           <code class="ruby">          run_active_command</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="73">
-          
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
           
           <code class="ruby">        rescue InvalidCommandError =&gt; e</code>
         </li>
@@ -3732,8 +3732,8 @@
           <code class="ruby">        rescue =&gt; e</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="81">
-          
+        <li class="covered" data-hits="1" data-linenumber="81">
+          <span class="hits">1</span>
           
           <code class="ruby">          if @never_trace</code>
         </li>
@@ -3750,8 +3750,8 @@
           <code class="ruby">          else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="84">
-          
+        <li class="covered" data-hits="1" data-linenumber="84">
+          <span class="hits">1</span>
           
           <code class="ruby">            abort &quot;error: #{e}. Use --trace to view backtrace&quot;</code>
         </li>
@@ -3810,14 +3810,14 @@
           <code class="ruby">		def have_action?</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="94">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="94">
+          <span class="hits">1</span>
           
           <code class="ruby">			require_valid_command</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="95">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="95">
+          <span class="hits">1</span>
           
           <code class="ruby">			goto_child_command if active_command.has_no_action?</code>
         </li>
@@ -3864,26 +3864,26 @@
           <code class="ruby">		def goto_child_command </code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="103">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="103">
+          
           
           <code class="ruby">			@args.shift</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="104">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="104">
+          
           
           <code class="ruby">			@__active_command = nil</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
           
           <code class="ruby">			@__command_name_from_args = nil</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="106">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="106">
+          
           
           <code class="ruby">			have_action?</code>
         </li>
@@ -4212,8 +4212,8 @@
           <code class="ruby">    def program(key, *args, &amp;block)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="161">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="161">
+          <span class="hits">11</span>
           
           <code class="ruby">      if key == :help &amp;&amp; !args.empty?</code>
         </li>
@@ -4230,8 +4230,8 @@
           <code class="ruby">        @program[:help][args.first] = args.at(1)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="164">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="164">
+          <span class="hits">11</span>
           
           <code class="ruby">      elsif key == :help_formatter &amp;&amp; !args.empty?</code>
         </li>
@@ -4242,8 +4242,8 @@
           <code class="ruby">        @program[key] = (@help_formatter_aliases[args.first] || args.first)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="166">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="166">
+          <span class="hits">11</span>
           
           <code class="ruby">      elsif block</code>
         </li>
@@ -4260,8 +4260,8 @@
           <code class="ruby">      else</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="169">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="169">
+          <span class="hits">11</span>
           
           <code class="ruby">        unless args.empty?</code>
         </li>
@@ -4278,8 +4278,8 @@
           <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="172">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="11" data-linenumber="172">
+          <span class="hits">11</span>
           
           <code class="ruby">        @program[key]</code>
         </li>
@@ -4392,26 +4392,26 @@
           <code class="ruby">    def command(name, &amp;block)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="191">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="191">
+          <span class="hits">5</span>
           
           <code class="ruby">			SimpleCommander::Command.new(name).tap do |cmd|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="192">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="192">
+          <span class="hits">5</span>
           
           <code class="ruby">				add_command(cmd) if block</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="193">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="193">
+          <span class="hits">5</span>
           
           <code class="ruby">				cmd.super_self = self</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="194">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="194">
+          <span class="hits">5</span>
           
           <code class="ruby">				cmd.instance_eval &amp;block if block</code>
         </li>
@@ -4422,8 +4422,8 @@
           <code class="ruby">			end</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="196">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="5" data-linenumber="196">
+          <span class="hits">5</span>
           
           <code class="ruby">			@commands[name.to_s]</code>
         </li>
@@ -4650,8 +4650,8 @@
           <code class="ruby">    def add_command(command)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="234">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="3" data-linenumber="234">
+          <span class="hits">3</span>
           
           <code class="ruby">      @commands[command.name] = command</code>
         </li>
@@ -4788,8 +4788,8 @@
           <code class="ruby">    def active_command</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="257">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="4" data-linenumber="257">
+          <span class="hits">4</span>
           
           <code class="ruby">      @__active_command ||= command(command_name_from_args)</code>
         </li>
@@ -4836,8 +4836,8 @@
           <code class="ruby">    def command_name_from_args</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="265">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="3" data-linenumber="265">
+          <span class="hits">3</span>
           
           <code class="ruby">      @__command_name_from_args ||= (valid_command_names_from(*@args.dup).sort.last || @default_command)</code>
         </li>
@@ -4878,14 +4878,14 @@
           <code class="ruby">    def valid_command_names_from(*args)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="272">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="2" data-linenumber="272">
+          <span class="hits">2</span>
           
           <code class="ruby">      arg_string = args.delete_if { |value| value =~ /^-/ }.join &#39; &#39;</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="273">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="4" data-linenumber="273">
+          <span class="hits">4</span>
           
           <code class="ruby">      commands.keys.find_all { |name| name if /^#{name}\b/.match arg_string }</code>
         </li>
@@ -4926,8 +4926,8 @@
           <code class="ruby">    def help_formatter</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="280">
-          
+        <li class="covered" data-hits="1" data-linenumber="280">
+          <span class="hits">1</span>
           
           <code class="ruby">      @__help_formatter ||= program(:help_formatter).new self</code>
         </li>
@@ -5046,8 +5046,8 @@
           <code class="ruby">        compact: HelpFormatter::TerminalCompact,</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="300">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="300">
+          <span class="hits">1</span>
           
           <code class="ruby">      }</code>
         </li>
@@ -5106,8 +5106,8 @@
           <code class="ruby">        name: File.basename($PROGRAM_NAME),</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="310">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="310">
+          <span class="hits">1</span>
           
           <code class="ruby">      }</code>
         </li>
@@ -5154,56 +5154,56 @@
           <code class="ruby">    def create_default_commands</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="318">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="318">
+          <span class="hits">1</span>
           
           <code class="ruby">			command :help do</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="319">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="319">
+          <span class="hits">1</span>
           
           <code class="ruby">        syntax = &#39;commander help [command]&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="320">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="320">
+          <span class="hits">1</span>
           
           <code class="ruby">        description = &#39;Display global or [command] help documentation&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="321">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="321">
+          <span class="hits">1</span>
           
           <code class="ruby">        example &#39;Display global help&#39;, &#39;command help&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="322">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="322">
+          <span class="hits">1</span>
           
           <code class="ruby">        example &quot;Display help for &#39;foo&#39;&quot;, &#39;command help foo&#39;</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="323">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="323">
+          <span class="hits">1</span>
           
           <code class="ruby">        when_called do |args, _options|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="324">
-          
+        <li class="covered" data-hits="1" data-linenumber="324">
+          <span class="hits">1</span>
           
           <code class="ruby">          UI.enable_paging</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="325">
-          
+        <li class="covered" data-hits="1" data-linenumber="325">
+          <span class="hits">1</span>
           
           <code class="ruby">          if args.empty?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="326">
-          
+        <li class="covered" data-hits="1" data-linenumber="326">
+          <span class="hits">1</span>
           
           <code class="ruby">            say help_formatter.render</code>
         </li>
@@ -5310,8 +5310,8 @@
           <code class="ruby">    def require_valid_command(command = active_command)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="344">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="2" data-linenumber="344">
+          <span class="hits">2</span>
           
           <code class="ruby">      fail InvalidCommandError, &#39;invalid command&#39;, caller if command.nil?</code>
         </li>
@@ -5442,8 +5442,8 @@
           <code class="ruby">        args.delete_if do |arg|</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="366">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="9" data-linenumber="366">
+          <span class="hits">9</span>
           
           <code class="ruby">          if switches.any? { |s| s[0, arg.length] == arg }</code>
         </li>
@@ -5478,14 +5478,14 @@
           <code class="ruby">          else</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="372">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="3" data-linenumber="372">
+          <span class="hits">3</span>
           
           <code class="ruby">            arg_removed = true</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="373">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="3" data-linenumber="373">
+          <span class="hits">3</span>
           
           <code class="ruby">            false</code>
         </li>
@@ -5880,20 +5880,20 @@
           <code class="ruby">    def self.separate_switches_from_description(*args)</code>
         </li>
       
-        <li class="covered" data-hits="20" data-linenumber="439">
-          <span class="hits">20</span>
+        <li class="covered" data-hits="16" data-linenumber="439">
+          <span class="hits">16</span>
           
           <code class="ruby">      switches = args.find_all { |arg| arg.to_s =~ /^-/ }</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="440">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="440">
+          <span class="hits">4</span>
           
           <code class="ruby">      description = args.last if args.last.is_a?(String) &amp;&amp; !args.last.match(/^-/)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="441">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="4" data-linenumber="441">
+          <span class="hits">4</span>
           
           <code class="ruby">      [switches, description]</code>
         </li>
