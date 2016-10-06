@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'byebug'
 
 describe SimpleCommander do
   include SimpleCommander::Methods
@@ -427,11 +428,17 @@ describe SimpleCommander do
 
 	describe 'with nested commands' do
 		it 'should run nested command' do
-			#new_command_runner do
-			#	command('parent'){}
-			#	command('child'){  }
-			#end
-			exptect(true).to eq(true)
+			new_command_runner('parent', 'child') do
+				command :parent  do
+					command :child do
+						action do |args, options|
+							say 'nested child'
+						end
+					end
+				end
+			end.run!
+			#debugger
+			expect(@output.string).to eq ("nested child\n")
 		end
 	end
 
