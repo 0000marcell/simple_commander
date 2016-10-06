@@ -1,4 +1,4 @@
-module Commander
+module SimpleCommander
   module Platform
     def self.jruby?
       defined?(RUBY_ENGINE) && (RUBY_ENGINE == 'jruby')

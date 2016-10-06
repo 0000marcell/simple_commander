@@ -1,7 +1,7 @@
 require 'tempfile'
 require 'shellwords'
 
-module Commander
+module SimpleCommander
   ##
   # = User Interaction
   #
@@ -257,7 +257,7 @@ module Commander
 
     def ask_editor(input = nil, preferred_editor = nil)
       editor = available_editor preferred_editor
-      program = Commander::Runner.instance.program(:name).downcase rescue 'commander'
+      program = SimpleCommander::Runner.instance.program(:name).downcase rescue 'commander'
       tmpfile = Tempfile.new program
       begin
         tmpfile.write input if input

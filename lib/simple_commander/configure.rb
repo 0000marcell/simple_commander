@@ -1,7 +1,7 @@
-module Commander
+module SimpleCommander
   def configure(*configuration_opts, &configuration_block)
     configuration_module = Module.new
-    configuration_module.extend Commander::Methods
+    configuration_module.extend SimpleCommander::Methods
 
     configuration_module.class_exec(*configuration_opts, &configuration_block)
 

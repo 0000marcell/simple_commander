@@ -1,4 +1,4 @@
-create gem scommander
+add commander rspec tests and write tests for the new functionalities
 add highline as a dependency on the gem
 change the name of the Commander module to SimpleCommander
 create scommader cli which transform the script in an directory with helpers,
@@ -14,6 +14,7 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+create gem scommander
 make help default command work too
 add suport for nested commands
 studying commander api in ./commander

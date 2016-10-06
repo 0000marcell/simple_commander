@@ -1,2 +1,2 @@
-require 'commander/core_ext/array'
-require 'commander/core_ext/object'
+require 'simple_commander/core_ext/array'
+require 'simple_commander/core_ext/object'

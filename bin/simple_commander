@@ -4,7 +4,7 @@ require 'rubygems'
 require 'simple_commander/import'
 
 program :name, 'scommander'
-program :version, Commander::VERSION
+program :version, SimpleCommander::VERSION
 program :description, 'Simple Commander utility program.'
 
 command :init do

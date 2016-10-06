@@ -1,4 +1,4 @@
-module Commander
+module SimpleCommander
   ##
   # = Help Formatter
   #

@@ -1,8 +1,8 @@
-module Commander
+module SimpleCommander
   module HelpFormatter
-    autoload :Base, 'commander/help_formatters/base'
-    autoload :Terminal, 'commander/help_formatters/terminal'
-    autoload :TerminalCompact, 'commander/help_formatters/terminal_compact'
+    autoload :Base, 'simple_commander/help_formatters/base'
+    autoload :Terminal, 'simple_commander/help_formatters/terminal'
+    autoload :TerminalCompact, 'simple_commander/help_formatters/terminal_compact'
 
     class Context
       def initialize(target)

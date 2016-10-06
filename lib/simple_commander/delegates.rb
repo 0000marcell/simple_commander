@@ -1,4 +1,4 @@
-module Commander
+module SimpleCommander
   module Delegates
     %w(
       add_command
@@ -13,13 +13,13 @@ module Commander
     ).each do |meth|
       eval <<-END, binding, __FILE__, __LINE__
         def #{meth}(*args, &block)
-          ::Commander::Runner.instance.#{meth}(*args, &block)
+          ::SimpleCommander::Runner.instance.#{meth}(*args, &block)
         end
       END
     end
 
     def defined_commands(*args, &block)
-      ::Commander::Runner.instance.commands(*args, &block)
+      ::SimpleCommander::Runner.instance.commands(*args, &block)
     end
   end
 end

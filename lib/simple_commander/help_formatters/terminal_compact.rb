@@ -1,6 +1,6 @@
 require 'erb'
 
-module Commander
+module SimpleCommander
   module HelpFormatter
     class TerminalCompact < Terminal
       def template(name)

@@ -1,5 +1,5 @@
 require 'simple_commander'
 
-include Commander::Methods
+include SimpleCommander::Methods
 
 at_exit { run! }

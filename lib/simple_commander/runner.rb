@@ -1,6 +1,6 @@
 require 'optparse'
 
-module Commander
+module SimpleCommander
   class Runner
     #--
     # Exceptions
@@ -64,11 +64,11 @@ module Commander
       global_option('-t', '--trace', 'Display backtrace when an error occurs') { trace = true } unless @never_trace || @always_trace
       parse_global_options
       remove_global_options options, @args
-			have_action?
       if trace
         run_active_command
       else
         begin
+					have_action?
           run_active_command
         rescue InvalidCommandError => e
           abort "#{e}. Use --help for more information"
@@ -91,6 +91,7 @@ module Commander
 		# tests if the current active command have an action block
 
 		def have_action?
+			require_valid_command
 			goto_child_command if active_command.has_no_action?
 		end
 
@@ -187,14 +188,12 @@ module Commander
     #
 
     def command(name, &block)
-			Commander::Command.new(name).tap do |cmd|
+			SimpleCommander::Command.new(name).tap do |cmd|
 				add_command(cmd) if block
 				cmd.super_self = self
 				cmd.instance_eval &block if block
 			end
-			#add_command(Commander::Command.new(name)) if block
-      #yield add_command(Commander::Command.new(name)) if block
-      @commands[name.to_s]
+			@commands[name.to_s]
     end
 
     ##

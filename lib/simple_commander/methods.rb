@@ -1,8 +1,8 @@
-module Commander
+module SimpleCommander
   module Methods
-    include Commander::UI
-    include Commander::UI::AskForClass
-    include Commander::Delegates
+    include SimpleCommander::UI
+    include SimpleCommander::UI::AskForClass
+    include SimpleCommander::Delegates
 
     if $stdin.tty? && (cols = $terminal.output_cols) >= 40
       $terminal.wrap_at = cols - 5

@@ -4,7 +4,7 @@ require 'simple_commander/version'
 
 Gem::Specification.new do |s|
 	s.name        = 'simple_commander'
-  s.version     = Commander::VERSION
+  s.version     = SimpleCommander::VERSION
   s.authors     = ['Marcell Monteiro Cruz']
   s.email       = ['0000marcell@gmail.com']
   s.license     = 'MIT'

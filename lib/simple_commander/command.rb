@@ -1,6 +1,6 @@
 require 'optparse'
 
-module Commander
+module SimpleCommander
   class Command
     attr_accessor :name, :examples, :syntax, :description, :super_self
     attr_accessor :summary, :proxy_options, :options
@@ -28,7 +28,7 @@ module Commander
       end
 
       def inspect
-        "<Commander::Command::Options #{ __hash__.map { |k, v| "#{k}=#{v.inspect}" }.join(', ') }>"
+        "<SimpleCommander::Command::Options #{ __hash__.map { |k, v| "#{k}=#{v.inspect}" }.join(', ') }>"
       end
     end
 
@@ -218,7 +218,7 @@ module Commander
     end
 
     def inspect
-      "<Commander::Command:#{name}>"
+      "<SimpleCommander::Command:#{name}>"
     end
   end
 end
