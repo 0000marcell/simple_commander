@@ -425,6 +425,16 @@ describe SimpleCommander do
     end
   end
 
+	describe 'with nested commands' do
+		it 'should run nested command' do
+			#new_command_runner do
+			#	command('parent'){}
+			#	command('child'){  }
+			#end
+			exptect(true).to eq(true)
+		end
+	end
+
   describe 'with invalid command passed to help' do
     it 'should output an invalid command message' do
       expect do
