@@ -12,6 +12,10 @@
 	font-size: 2.0rem;
 }
 
+.desc{
+	font-size: 1.0rem;
+}
+
 .code-bg{
 	background-color: #04243F;
 }
@@ -33,6 +37,16 @@
 }
 
 .buttons-row .btn {
-	width: 200px;
+	width: 150px;
 	background-color: #9c27b0;
+}
+
+@media (min-width: 600px){
+	.logo{
+		font-size: 4.0rem		
+	}	
+
+	.desc{
+		font-size: 1.5rem		
+	}
 }
