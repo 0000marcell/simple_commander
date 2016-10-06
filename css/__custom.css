@@ -1,0 +1,38 @@
+@font-face {
+	font-family: visitor;
+	src: url(visitor.ttf);
+}
+
+.visitor{
+	font-family: visitor;
+	color: #9c27b0;
+}
+
+.logo{
+	font-size: 2.0rem;
+}
+
+.code-bg{
+	background-color: #04243F;
+}
+
+.code-block{
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.main-code {
+	img{
+		width: 20%;
+	}
+}
+
+.buttons-row div {
+	height: 50px;
+	padding-top: 20px !important;
+}
+
+.buttons-row .btn {
+	width: 200px;
+	background-color: #9c27b0;
+}
