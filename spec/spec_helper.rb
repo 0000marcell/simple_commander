@@ -1,9 +1,14 @@
 require 'rubygems'
 require 'stringio'
 require 'simplecov'
+require "codeclimate-test-reporter"
+CodeClimate::TestReporter.start
+
 SimpleCov.start do
   add_filter '/spec/'
 end
+
+
 
 # Unshift so that local files load instead of something in gems
 $LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
