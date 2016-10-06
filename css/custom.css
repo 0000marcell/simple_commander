@@ -50,3 +50,11 @@
 		font-size: 1.5rem		
 	}
 }
+
+.features-list li{
+	font-family: visitor;
+	list-style-type: square;
+	color: #9c27b0;
+
+}
+
