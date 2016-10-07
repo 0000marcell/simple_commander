@@ -56,6 +56,20 @@
 					<li>Organize all your scripts in one folder</li>
 					<li>All commander APIs are supported</li>
 				</ul>
+				<div class='divider'></div>
+				<h4 class='visitor' >./Helpers</h4>
+				<div class='divider'></div>
+				<p>helpers are mixins added to the program that wrap some functionality, there are default helpers like IO, or you can create your own helpers</p>
+				<p>to use a helper you just need to required with the helpers method</p> 
+				<img class='responsive-img' src='./assets/helpers_code.png'>
+				<p>because IO and HTTP are part of the default helpers you just need to use the helpers method,  now you can use it in your program</p> 
+				<img class='responsive-img' src='./assets/IO_helper_example.png'>
+				<div class='divider'></div>
+				<h4 class='visitor' >./Use your own helpers</h4>
+				<div class='divider'></div>
+				<p>To use you own helpers you just need to create a ruby module</p>
+				<img class='responsive-img' src='./assets/own_helper.png'>
+				<p>Now you just need to require './youhelper.rb' and use normally with "helpers 'IO', 'Image' ..." the name of the helper must follow the pattern <b>name</b>_helper</p>
 			</div>
 		</div>
 	</body>
