@@ -43,6 +43,19 @@ describe SimpleCommander do
     end
   end
 
+	describe '#helpers' do
+		it 'should add module mixins to the runner class' do
+			runner = new_command_runner { helpers 'IO' }
+			expect(runner.methods.include?(:copy)).to be true
+		end
+
+		it 'raise an exeption if a module is not defined' do
+			expect do
+				new_command_runner { helpers 'ABC' }
+			end.to raise_error(SimpleCommander::Runner::UndefinedHelperError)
+		end
+	end
+
   describe '#separate_switches_from_description' do
     it 'should seperate switches and description returning both' do
       switches, description = *SimpleCommander::Runner.separate_switches_from_description('-h', '--help', 'display help')
@@ -437,7 +450,7 @@ describe SimpleCommander do
 					end
 				end
 			end.run!
-			#debugger
+
 			expect(@output.string).to eq ("nested child\n")
 		end
 	end

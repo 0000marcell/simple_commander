@@ -8,6 +8,7 @@ module SimpleCommander
 
     class CommandError < StandardError; end
     class InvalidCommandError < CommandError; end
+		class UndefinedHelperError < StandardError; end
 
     ##
     # Array of commands.
@@ -36,6 +37,28 @@ module SimpleCommander
       @never_trace = false
       create_default_commands
     end
+		
+		## 
+		# search in the helpers folders for the helpers module
+		# and include in the runner
+		
+		def helpers(*args)
+			args.each do |h|
+				helper_name = "#{h}_helper"
+				fail UndefinedHelperError, "Invalid helper #{helper_name}", 
+					caller if !helper_exist? helper_name
+				SimpleCommander::Runner.send(:include, 
+																		 Object.const_get(helper_name))	
+			end
+		end
+
+		##
+		# check if the helper exist 
+
+		def helper_exist?(helper)
+			Object.const_defined?(helper) && 
+			Object.const_get(helper).instance_of?(::Module)
+		end
 
     ##
     # Return singleton Runner instance.

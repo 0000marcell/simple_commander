@@ -4,6 +4,7 @@ module SimpleCommander
       add_command
       command
       program
+			helpers
       run!
       global_option
       alias_command

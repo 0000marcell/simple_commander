@@ -1,9 +1,15 @@
+write documentaion for hepers in the readme
+write tests and add helper functionality to readme 
+make the helper search in the helpers folder of the project
+raise exeption when the helper is undefined
+write tests for the helpers method
+implement helpers command
+create scommader cli which transform the script in an directory with helpers, 
+tests etc..
 add ci 
 add codeclimate
 add test coverage
 add logo to read and simple readme
-create scommader cli which transform the script in an directory with helpers,
-tests etc..
 add suport for helpers
 make syntax, options ect.. actually methods instead of variables
 make say accept a color hex
