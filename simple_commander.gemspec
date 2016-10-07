@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ['0000marcell@gmail.com']
   s.license     = 'MIT'
   s.homepage    = 'https://github.com/0000marcell/simple_commander'
-  s.summary     = 'easiest and fastest way to create command line interfaces for simple programs'
+  s.summary     = 'Command line framework based on commander and inspired by GLI Thor and others...'
 	s.files       = `git ls-files`.split("\n")
 	s.test_files  = `git ls-files -- {test, spec, features}/*`.split("\n")
 	s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
