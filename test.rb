@@ -1,24 +1,15 @@
-module Helper
-	def testing 
-		puts 'testing!'
+module Commander
+	module CLI
+		class Fuck < StandardError
+			def initialize
+				super("this is a error")
+			end
+		end
+
+		def self.error
+			raise Fuck
+		end
 	end
 end
 
-
-class Document
-	def include_mixin
-		Document.include Helper
-	end
-end
-
-class InvalidCommandError < StandardError; end
-Helper123 = "marcell"
-#puts Object.const_get("Helper").instance_of?(::Module)
-#fail InvalidCommandError, 'invalid command', caller if !defined? helper_name
-
-doc = Document.new
-doc.include_mixin
-doc.testing
-
-puts doc.methods.include? :testing
-
+Commander::CLI.error

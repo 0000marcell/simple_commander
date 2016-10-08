@@ -1,16 +1,57 @@
 #!/usr/bin/env ruby
+$LOAD_PATH.unshift File.dirname(__FILE__) + '/../lib'
 
 require 'rubygems'
 require 'simple_commander/import'
 
-program :name, 'scommander'
+program :name, 'simple_commander'
 program :version, SimpleCommander::VERSION
 program :description, 'Simple Commander utility program.'
+helpers 'IO'
 
 command :init do
-	action do
-		# add init code here
-		puts "init!"
+	syntax      'simple_commander init <optional_path defaults to ./> '
+	description 'Add this folder to the simple commander path as the default folder for scripts'
+	
+	action do |args, options|
+		SimpleCommander::CLI.init(args)
+	end
+end
+
+command 'show config' do
+	syntax      'show config'	
+	description 'show the current configuration'
+
+	action do |args, options|
+		SimpleCommander::CLI.show_config
+	end
+end
+
+command :new do
+	action do |args, options|
+		SimpleCommander::CLI.new(args)
+		config_file = "#{File.dirname(__FILE__)}/config.yml"
+		yml = YAML.load_file(config_file)
+		sc_folder = yml[:path] 
+		temp_folder = "#{File.dirname(__FILE__)}/"
+		s_path = "#{sc_folder}/#{args[0]}"
+		if !sc_folder
+			say <<-END 
+				You need to set a path to commander
+				use simple_commander init <path> or cd to
+				the folder you want and just simple_commander init
+			END
+			return
+		end
+
+		debugger
+		if File.directory?(s_path)
+			say "The script #{args[0]} already exist!"
+			return
+		end
+		mkdir s_path 
+		mkdir "#{s_path}/bin"
+		mkdir "#{s_path}/spec"
 	end
 end
  

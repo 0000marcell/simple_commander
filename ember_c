@@ -2,7 +2,6 @@
 $LOAD_PATH.unshift File.expand_path './lib'
 
 require 'simple_commander/import'
-require './helpers/http_helper'
 
 program :name, 'ember-c'
 program :version, '0.0.1'

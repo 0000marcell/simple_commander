@@ -1,10 +1,10 @@
-make syntax, options ect.. actually methods instead of variables
 create init cli command that creates a folder for the scripts 
 create scommader cli which transform the script in an directory with helpers, 
 tests etc..
 add ci 
 add codeclimate
 add test coverage
+solve rubocop problems
 add logo to read and simple readme
 add suport for helpers
 make say accept a color hex
@@ -16,6 +16,7 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+make syntax, options ect.. actually methods instead of variables
 implement helpers command
 write tests for the helpers method
 write tests and add helper functionality to readme 
