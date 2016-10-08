@@ -7,17 +7,16 @@ require './helpers/http_helper'
 program :name, 'ember-c'
 program :version, '0.0.1'
 program :description, 'implementing ember with modified commander'
-helpers 'IO', 'HTTP'
+helpers 'IO'
 
 command :new do
-	syntax = 'ember-c new <name>'
-	summary = 'create a new ember project'
-	description = 'Create a new ember project'
+	syntax 		  	'ember-c new <name>'
+	description 	'Create a new ember project'
+	option '--name STRING', String, 'changing stuff'
 	action do |args, options|
 		run_cmd(File.expand_path './') do
 			say `ls`
 		end
-		http_get
 	end
 end
 

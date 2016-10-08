@@ -5,6 +5,27 @@ module SimpleCommander
     attr_accessor :name, :examples, :syntax, :description, :super_self
     attr_accessor :summary, :proxy_options, :options
 
+		##
+		# set syntax	
+
+		def syntax(val)
+			@syntax = val
+		end
+
+		##
+		# summany 
+
+		def summary(val)
+			@summary = val
+		end
+
+		##
+		# description 
+
+		def description(val)
+			@description = val
+		end
+		
     ##
     # Options struct.
 

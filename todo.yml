@@ -1,9 +1,5 @@
-write documentaion for hepers in the readme
-write tests and add helper functionality to readme 
-make the helper search in the helpers folder of the project
-raise exeption when the helper is undefined
-write tests for the helpers method
-implement helpers command
+make syntax, options ect.. actually methods instead of variables
+create init cli command that creates a folder for the scripts 
 create scommader cli which transform the script in an directory with helpers, 
 tests etc..
 add ci 
@@ -11,7 +7,6 @@ add codeclimate
 add test coverage
 add logo to read and simple readme
 add suport for helpers
-make syntax, options ect.. actually methods instead of variables
 make say accept a color hex
 make possible to pass more than one action, and execute sequentially
 
@@ -21,6 +16,10 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+implement helpers command
+write tests for the helpers method
+write tests and add helper functionality to readme 
+write documentaion for hepers in the readme
 learn how to use rubocop
 change the name of the Commander module to SimpleCommander
 add highline as a dependency on the gem

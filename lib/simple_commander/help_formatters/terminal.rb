@@ -5,6 +5,7 @@ module SimpleCommander
     class Terminal < Base
       def render
         template(:help).result(ProgramContext.new(@runner).get_binding)
+				#template(:help).result
       end
 
       def render_command(command)

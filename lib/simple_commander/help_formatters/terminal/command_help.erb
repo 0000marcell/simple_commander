@@ -12,7 +12,7 @@
 
   <%= $terminal.color "DESCRIPTION", :bold %>:
 
-    <%= Commander::HelpFormatter.indent 4, (@description || @summary || 'No description.') -%>
+    <%= SimpleCommander::HelpFormatter.indent 4, (@description || @summary || 'No description.') -%>
 
 <% unless @examples.empty? -%>
 
@@ -29,7 +29,7 @@
 	<% for option in @options -%>
 
     <%= option[:switches].join ', ' %> 
-        <%= Commander::HelpFormatter.indent 8, option[:description] %>
+        <%= SimpleCommander::HelpFormatter.indent 8, option[:description] %>
 	<% end -%>
 <% end -%>
 
