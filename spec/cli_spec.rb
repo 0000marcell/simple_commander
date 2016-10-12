@@ -1,34 +1,51 @@
 require 'spec_helper'
 require 'simple_commander/cli'
+require 'byebug'
 
 describe SimpleCommander::CLI do
 	CONFIG_FILE = 
-				File.dirname(__FILE__) + '/../lib/simple_commander/config.yml'
+				File.dirname(__FILE__) + '/mock/config.yml'
 
 	before :each do
 		mock_terminal
-		File.open(CONFIG_FILE, 'w+'){ |f| f.write("not empty!") }
+	end
+
+	after :each do
+		FileUtils.rm(CONFIG_FILE)
 	end
 
 	describe '#init' do
 		it 'writes the path in to a config file' do
-			SimpleCommander::CLI.init
+			cli = SimpleCommander::CLI.new(CONFIG_FILE)
+			cli.init
 			yml = YAML.load_file(CONFIG_FILE)	
-			debugger
 			expect(yml[:path].empty?).to eq(false)
 		end
 	end
 
 	describe '#show_config' do
 		it 'shows the config file info' do
-			SimpleCommander::CLI.show_config
-			expect(@output.string).to eq("not empty!\n")
+			cli = SimpleCommander::CLI.new(CONFIG_FILE)
+			cli.init
+			cli.show_config
+			expect(@output.string.empty?).to eq(false)
 		end
 	end
 
 	describe '#new' do
+		it 'raise error create a new program without initializing the path' do
+			expect do 
+				SimpleCommander::CLI.new('ex_progam') 
+			end.to raise_error(SimpleCommander::CLI::UndefinedSCPath)
+		end
+
+		it 'raise error when creating program that already exists' do
+			expect{ SimpleCommander::CLI.new('ex_progam') }.to 
+				raise_error(SimpleCommander::CLI::UndefinedSCPath)
+		end
+
 		it 'creates new folders for the program' do
-			SimpleCommander::Cli.new('test_program')
+			SimpleCommander::CLI.new('test_program')
 			expect(File.directory?('./spec/mock/test_program')).to
 				eq (true)
 		end

@@ -2,9 +2,11 @@ require 'yaml'
 require 'simple_commander/helpers/io'
 
 module SimpleCommander
-	module CLI
+	class CLI
 		include IO_helper
-		CONFIG_PATH = "#{File.dirname(__FILE__)}/config.yml"
+		DEFAULT_PATH = "#{File.dirname(__FILE__)}/config.yml"
+		attr_accessor :config_file
+
 		class UndefinedSCPath < StandardError
 			def initialize
 				msg = <<-END 
@@ -15,24 +17,28 @@ module SimpleCommander
 				super(msg)
 			end
 		end
+		
+		def initialize(path=DEFAULT_PATH)
+			@config_file = path
+		end
 
-		def self.init(*args)
-			if args[0]
-				local_path = File.expand_path(args[0])
+		def init(path='./')
+			if path
+				local_path = File.expand_path(path)
 			else
 				local_path = File.expand_path('./')
 			end
 
 			yml = { path: local_path }.to_yaml
-			File.open(CONFIG_PATH, 'w+'){|f| f.write(yml)}
+			File.open(@config_file, 'w+'){|f| f.write(yml)}
 		end
 
-		def self.show_config
-			say YAML.load_file(CONFIG_PATH)
+		def show_config
+			say YAML.load_file(@config_file)
 		end
 
-		def self.new(*args)
-			sc_path = YAML.load_file(CONFIG_PATH)[:path]
+		def new(*args)
+			sc_path = YAML.load_file(@config_file)[:path]
 			s_path = "#{sc_path}/#{args[0]}"
 			raise UndefinedSCPath if !sc_path 
 			raise StandardError "program #{args[0]} already exists!"  if File.directory?(s_path)

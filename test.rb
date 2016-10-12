@@ -1,9 +1,14 @@
 module Commander
-	module CLI
+	class CLI
+		attr_accessor :path
 		class Fuck < StandardError
 			def initialize
 				super("this is a error")
 			end
+		end
+
+		def initialize
+			@path = 'marcell'
 		end
 
 		def self.error
@@ -12,4 +17,6 @@ module Commander
 	end
 end
 
-Commander::CLI.error
+cli = Commander::CLI.new
+cli.path = 'joao'
+puts cli.path
