@@ -2,11 +2,11 @@ require 'rubygems'
 require 'stringio'
 require 'simplecov'
 require "codeclimate-test-reporter"
-CodeClimate::TestReporter.start
+#CodeClimate::TestReporter.start
 
-SimpleCov.start do
-  add_filter '/spec/'
-end
+#SimpleCov.start do
+ #add_filter '/spec/'
+#end
 
 
 

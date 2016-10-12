@@ -1,8 +1,10 @@
 require 'yaml'
+require 'simple_commander/helpers/io'
 
 module SimpleCommander
 	module CLI
-		CONFIG_PAH = "#{File.dirname(__FILE__)}/config.yml"
+		include IO_helper
+		CONFIG_PATH = "#{File.dirname(__FILE__)}/config.yml"
 		class UndefinedSCPath < StandardError
 			def initialize
 				msg = <<-END 
@@ -33,11 +35,7 @@ module SimpleCommander
 			sc_path = YAML.load_file(CONFIG_PATH)[:path]
 			s_path = "#{sc_path}/#{args[0]}"
 			raise UndefinedSCPath if !sc_path 
-			raise StandardError, ""  if File
-			if File.directory?(s_path)
-				say "The script #{args[0]} already exist!"
-				return
-			end
+			raise StandardError "program #{args[0]} already exists!"  if File.directory?(s_path)
 			mkdir s_path 
 			mkdir "#{s_path}/bin"
 			mkdir "#{s_path}/spec"

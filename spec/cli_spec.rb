@@ -10,18 +10,27 @@ describe SimpleCommander::CLI do
 		File.open(CONFIG_FILE, 'w+'){ |f| f.write("not empty!") }
 	end
 
-	describe 'init' do
+	describe '#init' do
 		it 'writes the path in to a config file' do
 			SimpleCommander::CLI.init
 			yml = YAML.load_file(CONFIG_FILE)	
-			expect(yml[:path]).to eq(File.expand_path('./'))
+			debugger
+			expect(yml[:path].empty?).to eq(false)
 		end
 	end
 
-	describe 'show config' do
+	describe '#show_config' do
 		it 'shows the config file info' do
 			SimpleCommander::CLI.show_config
 			expect(@output.string).to eq("not empty!\n")
+		end
+	end
+
+	describe '#new' do
+		it 'creates new folders for the program' do
+			SimpleCommander::Cli.new('test_program')
+			expect(File.directory?('./spec/mock/test_program')).to
+				eq (true)
 		end
 	end
 end
