@@ -55,9 +55,13 @@ describe SimpleCommander::CLI do
 		end
 
 		it 'creates new folders for the program' do
-			SimpleCommander::CLI.new('test_program')
-			expect(File.directory?('./spec/mock/test_program')).to
-				eq (true)
+			path = File.dirname(__FILE__) + 
+				'/mock'
+			cli = SimpleCommander::CLI.new
+			cli.init(path)
+			cli.new('ex_program')
+			expect(File.directory?('./spec/mock/ex_program')).to eq (true)
+			FileUtils.remove_dir('./spec/mock/ex_program')
 		end
 	end
 end
