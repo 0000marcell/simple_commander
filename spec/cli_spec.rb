@@ -11,7 +11,9 @@ describe SimpleCommander::CLI do
 	end
 
 	after :each do
-		FileUtils.rm(CONFIG_FILE)
+		if(File.file?(CONFIG_FILE))
+			FileUtils.rm(CONFIG_FILE)
+		end
 	end
 
 	describe '#init' do
@@ -34,8 +36,11 @@ describe SimpleCommander::CLI do
 
 	describe '#new' do
 		it 'raise error create a new program without initializing the path' do
+			path = File.dirname(__FILE__) + 
+				'/mock/config_without_path.yml'
+			cli = SimpleCommander::CLI.new(path)
 			expect do 
-				SimpleCommander::CLI.new('ex_progam') 
+				cli.new('ex_program')
 			end.to raise_error(SimpleCommander::CLI::UndefinedSCPath)
 		end
 

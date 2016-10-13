@@ -1,5 +1,6 @@
 require 'yaml'
 require 'simple_commander/helpers/io'
+require 'byebug'
 
 module SimpleCommander
 	class CLI
@@ -39,8 +40,8 @@ module SimpleCommander
 
 		def new(*args)
 			sc_path = YAML.load_file(@config_file)[:path]
+			raise UndefinedSCPath if !sc_path
 			s_path = "#{sc_path}/#{args[0]}"
-			raise UndefinedSCPath if !sc_path 
 			raise StandardError "program #{args[0]} already exists!"  if File.directory?(s_path)
 			mkdir s_path 
 			mkdir "#{s_path}/bin"
