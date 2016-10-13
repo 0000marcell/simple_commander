@@ -45,8 +45,13 @@ describe SimpleCommander::CLI do
 		end
 
 		it 'raise error when creating program that already exists' do
-			expect{ SimpleCommander::CLI.new('ex_progam') }.to 
-				raise_error(SimpleCommander::CLI::UndefinedSCPath)
+			path = File.dirname(__FILE__) + 
+				'/mock'
+			cli = SimpleCommander::CLI.new
+			cli.init(path)
+			expect do
+				cli.new('test_program') 
+			end.to raise_error(SimpleCommander::CLI::StandardError)
 		end
 
 		it 'creates new folders for the program' do

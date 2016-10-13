@@ -39,6 +39,7 @@ module SimpleCommander
 		end
 
 		def new(*args)
+			debugger
 			sc_path = YAML.load_file(@config_file)[:path]
 			raise UndefinedSCPath if !sc_path
 			s_path = "#{sc_path}/#{args[0]}"
