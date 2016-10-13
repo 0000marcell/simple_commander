@@ -1,0 +1,7 @@
+require 'rubygems'
+require 'simple_commander/import'
+
+program :name, '<%= @program_name %>'
+program :version, <%= @program_name.capitalize %>::VERSION
+program :description, '<%= @program_name %> utility program.'
+helpers 'IO'

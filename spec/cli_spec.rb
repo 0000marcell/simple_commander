@@ -51,7 +51,7 @@ describe SimpleCommander::CLI do
 			cli.init(path)
 			expect do
 				cli.new('test_program') 
-			end.to raise_error(SimpleCommander::CLI::StandardError)
+			end.to raise_error(StandardError)
 		end
 
 		it 'creates new folders for the program' do

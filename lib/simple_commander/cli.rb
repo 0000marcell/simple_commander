@@ -43,9 +43,18 @@ module SimpleCommander
 			raise UndefinedSCPath if !sc_path
 			s_path = "#{sc_path}/#{args[0]}"
 			raise StandardError "program #{args[0]} already exists!"  if File.directory?(s_path)
+			@program_name = args[0]
 			mkdir s_path 
 			mkdir "#{s_path}/bin"
 			mkdir "#{s_path}/spec"
+			mkdir "#{s_path}/lib"
+			mkdir "#{s_path}/lib/#{@program_name}"
+			template './templates/lib.erb',
+				"#{s_path}/lib/#{@program_name}.rb"
+			template './templates/version.erb',
+				"#{s_path}/lib/#{@program_name}/version.rb"
+			template './templates/bin.erb',
+				"#{s_path}/bin/#{@program_name}"
 		end
 	end
 end
