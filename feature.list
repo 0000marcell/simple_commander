@@ -1,0 +1,4 @@
+- create new programers with simple_commander init, simple_commander new <program name>
+- install programs with simple_commander install <hrl> 
+- crate HTTP helper
+- create sequencial actions like in thor

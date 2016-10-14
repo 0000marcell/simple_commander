@@ -14,7 +14,8 @@ command :init do
 	description 'Add this folder to the simple commander path as the default folder for scripts'
 	
 	action do |args, options|
-		SimpleCommander::CLI.init(args)
+		cli = SimpleCommander::CLI.new	
+		cli.init
 	end
 end
 
@@ -23,33 +24,15 @@ command 'show config' do
 	description 'show the current configuration'
 
 	action do |args, options|
-		SimpleCommander::CLI.show_config
+		cli = SimpleCommander::CLI.new
+		cli.show_config
 	end
 end
 
 command :new do
 	action do |args, options|
-		SimpleCommander::CLI.new(args)
-		config_file = "#{File.dirname(__FILE__)}/config.yml"
-		yml = YAML.load_file(config_file)
-		sc_folder = yml[:path] 
-		temp_folder = "#{File.dirname(__FILE__)}/"
-		s_path = "#{sc_folder}/#{args[0]}"
-		if !sc_folder
-			say <<-END 
-				You need to set a path to commander
-				use simple_commander init <path> or cd to
-				the folder you want and just simple_commander init
-			END
-			return
-		end
-		if File.directory?(s_path)
-			say "The script #{args[0]} already exist!"
-			return
-		end
-		mkdir s_path 
-		mkdir "#{s_path}/bin"
-		mkdir "#{s_path}/spec"
+		cli = SimpleCommander::CLI.new
+		cli.new(args[0])
 	end
 end
  
