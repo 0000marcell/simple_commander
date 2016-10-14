@@ -43,8 +43,6 @@ command :new do
 			END
 			return
 		end
-
-		debugger
 		if File.directory?(s_path)
 			say "The script #{args[0]} already exist!"
 			return
