@@ -10,7 +10,7 @@ program :description, 'Simple Commander utility program.'
 helpers 'IO'
 
 command :init do
-	syntax      'simple_commander init <optional_path defaults to ./> '
+	syntax      'simple_commander init <optional_path defaults to ./ > '
 	description 'Add this folder to the simple commander path as the default folder for scripts'
 	
 	action do |args, options|

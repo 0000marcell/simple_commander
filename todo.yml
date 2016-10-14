@@ -1,3 +1,4 @@
+solve problem with --help command, get_binding problem
 create init cli command that creates a folder for the scripts 
 identify if the name of the program is permited
 create scommader cli which transform the script in an directory with helpers, 

@@ -6,6 +6,8 @@ module SimpleCommander
 	class CLI
 		include IO_helper
 		DEFAULT_PATH = "#{File.dirname(__FILE__)}/config.yml"
+		TEMPLATE_PATH = File.expand_path "#{File.dirname(__FILE__)}" + 
+																			'/../../templates'
 		attr_accessor :config_file
 
 		class UndefinedSCPath < StandardError
@@ -49,11 +51,13 @@ module SimpleCommander
 			mkdir "#{s_path}/spec"
 			mkdir "#{s_path}/lib"
 			mkdir "#{s_path}/lib/#{@program_name}"
-			template './templates/lib.erb',
+			template "#{TEMPLATE_PATH}/lib.erb",
 				"#{s_path}/lib/#{@program_name}.rb"
-			template './templates/version.erb',
+
+			template "#{TEMPLATE_PATH}/version.erb",
 				"#{s_path}/lib/#{@program_name}/version.rb"
-			template './templates/bin.erb',
+
+			template "#{TEMPLATE_PATH}/bin.erb",
 				"#{s_path}/bin/#{@program_name}"
 		end
 	end
