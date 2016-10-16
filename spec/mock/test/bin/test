@@ -1,0 +1,7 @@
+require 'rubygems'
+require 'simple_commander/import'
+
+program :name, 'test'
+program :version, Test::VERSION
+program :description, 'test utility program.'
+helpers 'IO'

@@ -9,7 +9,7 @@ module SimpleCommander
 		TEMPLATE_PATH = File.expand_path "#{File.dirname(__FILE__)}" + 
 																			'/../../templates'
 		attr_accessor :config_file
-
+		
 		class UndefinedSCPath < StandardError
 			def initialize
 				msg = <<-END 
@@ -22,7 +22,9 @@ simple_commander init
 				super(msg)
 			end
 		end
-		
+
+		class InvalidProgram < StandardError; end
+
 		def initialize(path=DEFAULT_PATH)
 			@config_file = path
 		end
@@ -47,7 +49,7 @@ simple_commander init
 			sc_path = YAML.load_file(@config_file)[:path]
 			raise UndefinedSCPath if !sc_path
 			s_path = "#{sc_path}/#{args[0]}"
-			raise StandardError "program #{args[0]} already exists!"  if File.directory?(s_path)
+			fail InvalidProgram, "program #{args[0]} already exists!", caller if File.directory?(s_path)
 			@program_name = args[0]
 			mkdir s_path 
 			mkdir "#{s_path}/bin"

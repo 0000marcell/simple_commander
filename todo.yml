@@ -1,4 +1,3 @@
-create init cli command that creates a folder for the scripts 
 identify if the name of the program is permited
 create scommader cli which transform the script in an directory with helpers, 
 tests etc..
@@ -17,6 +16,7 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+create init cli command that creates a folder for the scripts 
 verify if the file exists before calling show config
 bug with helpers
 make syntax, options ect.. actually methods instead of variables
