@@ -13,9 +13,11 @@ module SimpleCommander
 		class UndefinedSCPath < StandardError
 			def initialize
 				msg = <<-END 
-					You need to set a path to commander
-					use simple_commander init <path> or cd to
-					the folder you want and just simple_commander init
+You need to set a path to commander
+use simple_commander init <path> or cd to
+the folder you want to use an repo for your 
+simple commander scripts  and run 
+simple_commander init
 				END
 				super(msg)
 			end
@@ -37,6 +39,7 @@ module SimpleCommander
 		end
 
 		def show_config
+			raise UndefinedSCPath if !File.file?(@config_file)
 			say YAML.load_file(@config_file)
 		end
 
