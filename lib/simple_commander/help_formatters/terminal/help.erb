@@ -9,7 +9,7 @@
   <%= $terminal.color "COMMANDS", :bold %>:
 <% for name, command in @commands.sort -%>
 	<% unless alias? name %>
-    <%= "%-#{max_command_length}s %s" % [command.name, command.summary || command.description] -%>
+    <%= "%-#{max_command_length}s %s" % [command.name, command.instance_variable_get(:@summary) || command.instance_variable_get(:@description)] -%>
 	<% end -%>
 <% end %>
 <% unless @aliases.empty? %>

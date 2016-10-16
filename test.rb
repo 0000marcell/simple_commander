@@ -1,22 +1,11 @@
-module Commander
-	class CLI
-		attr_accessor :path
-		class Fuck < StandardError
-			def initialize
-				super("this is a error")
-			end
-		end
+class Test
+	attr_accessor :summary
 
-		def initialize
-			@path = 'marcell'
-		end
-
-		def self.error
-			raise Fuck
-		end
+	def summary(val)
+		@summary = val
 	end
 end
 
-cli = Commander::CLI.new
-cli.path = 'joao'
-puts cli.path
+test = Test.new
+test.summary 'marcell'
+puts test.instance_variable_get(:@summary)

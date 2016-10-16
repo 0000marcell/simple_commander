@@ -25,7 +25,7 @@ module SimpleCommander
 		def description(val)
 			@description = val
 		end
-		
+
     ##
     # Options struct.
 

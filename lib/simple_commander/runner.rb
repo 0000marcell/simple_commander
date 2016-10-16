@@ -339,8 +339,8 @@ module SimpleCommander
 
     def create_default_commands
 			command :help do
-        syntax = 'commander help [command]'
-        description = 'Display global or [command] help documentation'
+        syntax 'commander help [command]'
+        description 'Display global or [command] help documentation'
         example 'Display global help', 'command help'
         example "Display help for 'foo'", 'command help foo'
         when_called do |args, _options|
