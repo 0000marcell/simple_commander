@@ -51,6 +51,7 @@ simple_commander init
 			s_path = "#{sc_path}/#{args[0]}"
 			fail InvalidProgram, "program #{args[0]} already exists!", caller if File.directory?(s_path)
 			@program_name = args[0]
+			@lib_path = "#{s_path}/lib" 
 			mkdir s_path 
 			mkdir "#{s_path}/bin"
 			mkdir "#{s_path}/spec"
@@ -65,7 +66,13 @@ simple_commander init
 			template "#{TEMPLATE_PATH}/bin.erb",
 				"#{s_path}/bin/#{@program_name}"
 			FileUtils.chmod "+x", "#{s_path}/bin/#{@program_name}"
-			File.symlink "#{s_path}/bin/#{@program_name}", File.expand_path("~/bin/#{@program_name}2")
+			cp "#{s_path}/bin/#{@program_name}", exec_path if exec_path
+		end
+
+		##
+		# if set any program created will be put in this folder
+		def exec_path
+			YAML.load_file(@config_file)[:exec_path]
 		end
 	end
 end

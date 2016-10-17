@@ -1,1 +1,6 @@
 require '<%= @program_name %>/version'
+
+program :name, '<%= @program_name %>'
+program :version, <%= @program_name.capitalize %>::VERSION
+program :description, '<%= @program_name %> utility program.'
+helpers 'IO'

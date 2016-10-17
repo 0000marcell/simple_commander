@@ -1,3 +1,5 @@
+create command to set exec_path
+test the new version on windows
 put command in the path of the new program
 make the newly created command work property
 realease a new version and test its functionalities
