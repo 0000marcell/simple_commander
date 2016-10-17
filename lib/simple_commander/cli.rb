@@ -64,6 +64,8 @@ simple_commander init
 
 			template "#{TEMPLATE_PATH}/bin.erb",
 				"#{s_path}/bin/#{@program_name}"
+			FileUtils.chmod "+x", "#{s_path}/bin/#{@program_name}"
+			File.symlink "#{s_path}/bin/#{@program_name}", File.expand_path("~/bin/#{@program_name}2")
 		end
 	end
 end

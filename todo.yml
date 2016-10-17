@@ -1,3 +1,6 @@
+put command in the path of the new program
+make the newly created command work property
+realease a new version and test its functionalities
 identify if the name of the program is permited
 create scommader cli which transform the script in an directory with helpers, 
 tests etc..
