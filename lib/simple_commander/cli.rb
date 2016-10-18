@@ -29,11 +29,12 @@ simple_commander init
 
 		def initialize(path=DEFAULT_PATH)
 			@config_file = path
-			yml = YAML.load_file(@config_file)
-			if(!yml)
-				obj = {}
-				File.open(@config_file, 'w+'){|f| f.write(obj.to_yaml)}
-			end
+			init_yaml_config if !File.file?(@config_file)
+		end
+
+		def init_yaml_config
+			yml = { path: "", exec_path: "" }.to_yaml
+			File.open(@config_file, 'w+'){|f| f.write(yml)}
 		end
 
 		def init(path='./')
@@ -43,8 +44,8 @@ simple_commander init
 				local_path = File.expand_path('./')
 			end
 			yml = YAML.load_file(@config_file)
-			yml[:path] = local_path 
-			File.open(@config_file, 'w+'){|f| f.write(yml)}
+			yml[:path] = local_path
+			File.open(@config_file, 'w+'){|f| f.write(yml.to_yaml)}
 		end
 
 		def show_config
@@ -73,7 +74,7 @@ simple_commander init
 			template "#{TEMPLATE_PATH}/bin.erb",
 				"#{s_path}/bin/#{@program_name}"
 			FileUtils.chmod "+x", "#{s_path}/bin/#{@program_name}"
-			cp "#{s_path}/bin/#{@program_name}", exec_path if exec_path
+			copy "#{s_path}/bin/#{@program_name}", exec_path if exec_path
 		end
 
 		##
@@ -87,7 +88,7 @@ simple_commander init
 		def set_exec_path(path)
 			yml = YAML.load_file(@config_file)
 			yml[:exec_path] = File.expand_path(path)
-			File.open(@config_file, 'w+'){|f| f.write(yml)}
+			File.open(@config_file, 'w+'){|f| f.write(yml.to_yaml)}
 		end
 	end
 end

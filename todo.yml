@@ -9,6 +9,7 @@ cli:
   identify if the name of the program is permited
   make writing tests easy
 
+create alis methods for cp etc ...
 create scommader cli which transform the script in an directory with helpers, 
 tests etc..
 add ci 

@@ -35,4 +35,11 @@ command :new do
 		cli.new(args[0])
 	end
 end
+
+command "exec path" do
+	action do |args, options|
+		cli = SimpleCommander::CLI.new
+		cli.set_exec_path args[0]
+	end
+end
  
