@@ -38,8 +38,9 @@ describe SimpleCommander::CLI do
 		it 'sets the path to the exec files' do
 			cli = SimpleCommander::CLI.new(CONFIG_FILE)
 			cli.set_exec_path('testing')
-			yml = YAML.load_file(CONFIG_FILE)[:exec_path]
-			expect(yml).to eq('testing')
+			debugger
+			yml = YAML.load_file(CONFIG_FILE)
+			expect(yml[:exec_path]).to eq('testing')
 		end
 	end
 

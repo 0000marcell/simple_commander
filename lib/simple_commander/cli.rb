@@ -29,13 +29,9 @@ simple_commander init
 
 		def initialize(path=DEFAULT_PATH)
 			@config_file = path
-			FileUtils.touch(@config_file) if !File.file?(@config_file)
 			yml = YAML.load_file(@config_file)
 			if(!yml)
-				obj = {
-					'path'=> '',
-					'exec_path'=> ''
-				}
+				obj = {}
 				File.open(@config_file, 'w+'){|f| f.write(obj.to_yaml)}
 			end
 		end
