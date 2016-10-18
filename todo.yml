@@ -1,9 +1,14 @@
-create command to set exec_path
-test the new version on windows
-put command in the path of the new program
-make the newly created command work property
-realease a new version and test its functionalities
-identify if the name of the program is permited
+cli:
+  create command to set exec_path
+  test the new version on windows
+  create a helpers folder inside the program
+  make overwrite the default helpers easy
+  put command in the path of the new program
+  make the newly created command work property
+  realease a new version and test its functionalities
+  identify if the name of the program is permited
+  make writing tests easy
+
 create scommader cli which transform the script in an directory with helpers, 
 tests etc..
 add ci 

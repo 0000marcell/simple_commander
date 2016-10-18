@@ -1,11 +1,8 @@
-class Test
-	attr_accessor :summary
-
-	def summary(val)
-		@summary = val
-	end
+require 'yaml'
+require 'byebug'
+yml = YAML.load_file('./config.yml')
+if(yml.key?('path'))
+	puts 'obj have key'
+else
+	puts 'obj dont have key'
 end
-
-test = Test.new
-test.summary 'marcell'
-puts test.instance_variable_get(:@summary)

@@ -1,5 +1,7 @@
+# REF: 0
 require 'yaml'
 require 'simple_commander/helpers/io'
+require 'fileutils'
 require 'byebug'
 
 module SimpleCommander
@@ -27,6 +29,15 @@ simple_commander init
 
 		def initialize(path=DEFAULT_PATH)
 			@config_file = path
+			FileUtils.touch(@config_file) if !File.file?(@config_file)
+			yml = YAML.load_file(@config_file)
+			if(!yml)
+				obj = {
+					'path'=> '',
+					'exec_path'=> ''
+				}
+				File.open(@config_file, 'w+'){|f| f.write(obj.to_yaml)}
+			end
 		end
 
 		def init(path='./')
@@ -35,8 +46,8 @@ simple_commander init
 			else
 				local_path = File.expand_path('./')
 			end
-
-			yml = { path: local_path }.to_yaml
+			yml = YAML.load_file(@config_file)
+			yml[:path] = local_path 
 			File.open(@config_file, 'w+'){|f| f.write(yml)}
 		end
 
@@ -70,9 +81,17 @@ simple_commander init
 		end
 
 		##
-		# if set any program created will be put in this folder
+		# if set the bin/executable* file of any program created will be put in this folder
 		def exec_path
 			YAML.load_file(@config_file)[:exec_path]
+		end
+
+		##
+		# set exec path
+		def set_exec_path(path)
+			yml = YAML.load_file(@config_file)
+			yml[:exec_path] = File.expand_path(path)
+			File.open(@config_file, 'w+'){|f| f.write(yml)}
 		end
 	end
 end

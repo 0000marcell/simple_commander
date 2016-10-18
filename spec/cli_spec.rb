@@ -34,6 +34,15 @@ describe SimpleCommander::CLI do
 		end
 	end
 
+	describe '#set_exec_path' do
+		it 'sets the path to the exec files' do
+			cli = SimpleCommander::CLI.new(CONFIG_FILE)
+			cli.set_exec_path('testing')
+			yml = YAML.load_file(CONFIG_FILE)[:exec_path]
+			expect(yml).to eq('testing')
+		end
+	end
+
 	describe '#new' do
 		it 'raise error create a new program without initializing the path' do
 			path = File.dirname(__FILE__) + 
