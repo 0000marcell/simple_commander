@@ -1,4 +1,6 @@
 cli:
+  write docummentation for show config
+  write documentation for add a exec_path 
   update new version
   test the new version on windows
   create a helpers folder inside the program
