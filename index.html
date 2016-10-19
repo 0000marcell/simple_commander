@@ -21,7 +21,7 @@
 			</div>
 		</div>
 		<div class='main-code code-bg'>
-			<div class='code-block center-align'>
+			<div class='code'>
 				<img class='responsive-img' src='./assets/code_example_main.png'>
 			</div>
 		</div>
@@ -61,21 +61,36 @@
 				<div class='divider'></div>
 				<p>helpers are mixins added to the program that wrap some functionality, there are default helpers like IO, or you can create your own helpers</p>
 				<p>to use a helper you just need to required with the helpers method</p> 
-				<img class='responsive-img' src='./assets/helpers_code.png'>
+				<div class='code'>
+					<img class='responsive-img' src='./assets/helpers_code.png'>
+				</div>
 				<p>because IO and HTTP are part of the default helpers you just need to use the helpers method,  now you can use it in your program</p> 
-				<img class='responsive-img' src='./assets/IO_helper_example.png'>
+				<div class='code'>
+					<img class='responsive-img' src='./assets/IO_helper_example.png'>
+				</div>
 				<div class='divider'></div>
 				<h4 class='visitor' >./Use your own helpers</h4>
 				<div class='divider'></div>
 				<p>To use you own helpers you just need to create a ruby module</p>
-				<img class='responsive-img' src='./assets/own_helper.png'>
+				<div class='code'>
+					<img class='responsive-img' src='./assets/own_helper.png'>
+				</div>
 				<p>Now you just need to require './youhelper.rb' and use normally with "helpers 'IO', 'Image' ..." the name of the helper must follow the pattern <b>name</b>_helper</p>
 				<h4 class='visitor' >./Quick Start</h4>
 				<p> After installation go to a directory where you want your programs to live and 
-				run `simple_commander init`, now every time you create a program with `simple_commander new <program_name>` a new folder will be created inside this folder, you can checkout where your programs live with `simple_commander show config`, this command will also show the configured exec_path, the exec path is where the newly crated program executables are copied after they are created, you can create a new exec_path with `simple_commander exec_path <path to execs folder>` 
-				</p>
+				run</p>
+				<div class='code'>simple_commander init</div>
+				<p> now every time you create a program with </p>
+				<div class='code'>simple_commander new "program name"</div>
+				<p> a new folder will be created inside this folder, you can checkout where your programs live with</p>
+				<div class='code'>simple_commander show config</div>
+				<p> 
+				this command will also show the configured exec_path, the exec path is where the newly crated program executables are copied after they are created, you can create a new exec_path with </p>
+				<div class='code'>simple_commander exec_path "path to exec folder"</div>
 				<h4 class='visitor' >./Example</h4>
-				<p>Lets say we wanna crate a new program called gh, to wrap some git and github tasks, we can run `simple_commander new gh` this will create a folder inside your programs path and put a exec inside you exec_path, now you can just run `gh --version` and `0.0.1` will return
+				<p>Lets say we wanna crate a new program called gh, to wrap some git and github tasks, we can run </p>
+				<div class='code'>simple_commander new gh</div>
+				<p> this will create a folder inside your programs path and put a exec inside you exec_path, now you can just run `gh --version` and `0.0.1` will return
 				</p>
 			</div>
 		</div>

@@ -1,3 +1,10 @@
+.code{
+	padding: 10px;
+	min-height: 50px;
+	background-color: #04243F;
+	color: white;
+}
+
 @font-face {
 	font-family: visitor;
 	src: url(visitor.ttf);
@@ -18,11 +25,6 @@
 
 .code-bg{
 	background-color: #04243F;
-}
-
-.code-block{
-	max-width: 800px;
-	margin: 0 auto;
 }
 
 .main-code {
