@@ -1,3 +1,6 @@
+=== 0.4.0 / 19-10-2016
+* option to set exec_path and copy newly created programs 
+
 === 0.3.2 / 16-10-2016
 * bug when initializing a new program solved
 
