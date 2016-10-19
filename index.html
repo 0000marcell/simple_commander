@@ -70,6 +70,13 @@
 				<p>To use you own helpers you just need to create a ruby module</p>
 				<img class='responsive-img' src='./assets/own_helper.png'>
 				<p>Now you just need to require './youhelper.rb' and use normally with "helpers 'IO', 'Image' ..." the name of the helper must follow the pattern <b>name</b>_helper</p>
+				<h4 class='visitor' >./Quick Start</h4>
+				<p> After installation go to a directory where you want your programs to live and 
+				run `simple_commander init`, now every time you create a program with `simple_commander new <program_name>` a new folder will be created inside this folder, you can checkout where your programs live with `simple_commander show config`, this command will also show the configured exec_path, the exec path is where the newly crated program executables are copied after they are created, you can create a new exec_path with `simple_commander exec_path <path to execs folder>` 
+				</p>
+				<h4 class='visitor' >./Example</h4>
+				<p>Lets say we wanna crate a new program called gh, to wrap some git and github tasks, we can run `simple_commander new gh` this will create a folder inside your programs path and put a exec inside you exec_path, now you can just run `gh --version` and `0.0.1` will return
+				</p>
 			</div>
 		</div>
 	</body>
