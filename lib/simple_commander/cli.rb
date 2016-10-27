@@ -1,6 +1,6 @@
 # REF: 0
 require 'yaml'
-require 'simple_commander/helpers/io'
+require File.dirname(__FILE__) + '/../../helpers/io_helper'
 require 'fileutils'
 require 'byebug'
 
@@ -64,6 +64,7 @@ simple_commander init
 			mkdir "#{s_path}/bin"
 			mkdir "#{s_path}/spec"
 			mkdir "#{s_path}/lib"
+			mkdir "#{s_path}/helpers"
 			mkdir "#{s_path}/lib/#{@program_name}"
 			template "#{TEMPLATE_PATH}/lib.erb",
 				"#{s_path}/lib/#{@program_name}.rb"

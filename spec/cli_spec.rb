@@ -14,6 +14,12 @@ describe SimpleCommander::CLI do
 		if(File.file?(CONFIG_FILE))
 			FileUtils.rm(CONFIG_FILE)
 		end
+		cli_config = File.dirname(__FILE__) + 
+			'/../lib/simple_commander/config.yml'
+		yml = YAML.load_file(cli_config)
+		if(File.file?("#{yml[:exec_path]}/ex_program"))
+			FileUtils.rm("#{yml[:exec_path]}/ex_program")
+		end
 	end
 
 	describe '#init' do
