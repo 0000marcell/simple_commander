@@ -1,8 +1,8 @@
 cli:
-  copy the default helpers to the helpers folder of the program
   import helpers to the default bin program
   make overwrite the default helpers easy
   put command in the path of the new program
+  change docs to tell to require on the bin file newly created helpers
   make the newly created command work property
   realease a new version and test its functionalities
   identify if the name of the program is permited
@@ -30,6 +30,7 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+copy the default helpers to the helpers folder of the program
 create a helpers folder inside the program
 write documentation for add a exec_path 
 update new version

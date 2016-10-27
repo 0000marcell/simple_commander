@@ -1,5 +1,11 @@
 #!/usr/bin/env ruby
 $LOAD_PATH.unshift "<%= @lib_path %>"
+$LOAD_PATH.unshift "<%= @helper_path %>"
 require 'rubygems'
 require 'simple_commander/import'
+require 'simple_commander/import'
+require 'io_helper'
+require 'http_helper'
+
+
 require '<%= @program_name %>'

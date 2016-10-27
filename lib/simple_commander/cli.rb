@@ -10,6 +10,8 @@ module SimpleCommander
 		DEFAULT_PATH = "#{File.dirname(__FILE__)}/config.yml"
 		TEMPLATE_PATH = File.expand_path "#{File.dirname(__FILE__)}" + 
 																			'/../../templates'
+		HELPERS_PATH = File.expand_path "#{File.dirname(__FILE__)}" + 
+																			'/../../helpers'
 		attr_accessor :config_file
 		
 		class UndefinedSCPath < StandardError
@@ -59,7 +61,8 @@ simple_commander init
 			s_path = "#{sc_path}/#{args[0]}"
 			fail InvalidProgram, "program #{args[0]} already exists!", caller if File.directory?(s_path)
 			@program_name = args[0]
-			@lib_path = "#{s_path}/lib" 
+			@lib_path    = "#{s_path}/lib" 
+			@helper_path = "#{s_path}/helpers" 
 			mkdir s_path 
 			mkdir "#{s_path}/bin"
 			mkdir "#{s_path}/spec"
@@ -76,6 +79,8 @@ simple_commander init
 				"#{s_path}/bin/#{@program_name}"
 			FileUtils.chmod "+x", "#{s_path}/bin/#{@program_name}"
 			copy "#{s_path}/bin/#{@program_name}", exec_path if exec_path
+			copy "#{HELPERS_PATH}/io_helper.rb", "#{s_path}/helpers/io_helper.rb"
+			copy "#{HELPERS_PATH}/http_helper.rb", "#{s_path}/helpers/http_helper.rb"
 		end
 
 		##
