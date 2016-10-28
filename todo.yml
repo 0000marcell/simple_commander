@@ -1,12 +1,11 @@
 cli:
-  import helpers to the default bin program
-  make overwrite the default helpers easy
-  put command in the path of the new program
+  release a new version
+  create the ember-generate program with the new version
+  set up a default templated path for newly created programs
+  make writing tests easy
   change docs to tell to require on the bin file newly created helpers
-  make the newly created command work property
   realease a new version and test its functionalities
   identify if the name of the program is permited
-  make writing tests easy
   test the new version on windows
 
 release:
@@ -30,6 +29,10 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+make the newly created command work property
+put command in the path of the new program
+make overwrite the default helpers easy
+import helpers to the default bin program
 copy the default helpers to the helpers folder of the program
 create a helpers folder inside the program
 write documentation for add a exec_path 

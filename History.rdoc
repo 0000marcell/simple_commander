@@ -1,3 +1,9 @@
+=== 0.5.1 / 28-10-2016
+* bug with config.yml solved
+
+=== 0.5.0 / 27-10-2016
+* helpers automacally included when a new program is created
+
 === 0.4.0 / 19-10-2016
 * option to set exec_path and copy newly created programs 
 
