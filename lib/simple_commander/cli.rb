@@ -86,7 +86,12 @@ simple_commander init
 		##
 		# if set the bin/executable* file of any program created will be put in this folder
 		def exec_path
-			YAML.load_file(@config_file)[:exec_path]
+			path = YAML.load_file(@config_file)[:exec_path]
+			if(path.empty?)
+				return false
+			else
+				return path
+			end
 		end
 
 		##

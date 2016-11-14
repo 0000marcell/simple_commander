@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift "/Users/marcell/Documents/github/simple_commander/spec/mock/test_program/lib"
+$LOAD_PATH.unshift "/Users/marcell/Documents/github/simple_commander/spec/mock/test_program/helpers"
+require 'rubygems'
+require 'simple_commander/import'
+require 'simple_commander/import'
+require 'io_helper'
+require 'http_helper'
+
+
+require 'test_program'

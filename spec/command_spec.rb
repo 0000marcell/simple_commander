@@ -44,6 +44,11 @@ describe SimpleCommander::Command do
   end
 
   describe '#run' do
+		describe 'should call the right nested command' do
+			it 'calls the right nested command' do
+			end
+		end
+
     describe 'should invoke #when_called' do
       it 'with arguments seperated from options' do
         @command.when_called { |args, _options| expect(args.join(' ')).to eq('just some args') }

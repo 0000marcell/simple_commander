@@ -40,6 +40,12 @@ def create_test_command
     end
   end
   @command = command :test
+
+	command :nested do
+		command :test do
+		end	
+	end
+	@nested_command = command :nested
 end
 
 # Create a new command runner

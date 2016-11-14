@@ -1,7 +1,10 @@
 cli:
-  release a new version
-  create the ember-generate program with the new version
+  bug when using nested commands with the same name, only the last definition
+    testing how the nesting of commands works, using spec_helper and running tests
+  is called
+  creating ember generate on sc_scripts/em 
   set up a default templated path for newly created programs
+  create the ember-generate program with the new version
   make writing tests easy
   change docs to tell to require on the bin file newly created helpers
   realease a new version and test its functionalities
@@ -29,6 +32,7 @@ learn about the implementation of the commander progress bar
 figuring out the progress bar
 
 done:
+release a new version
 make the newly created command work property
 put command in the path of the new program
 make overwrite the default helpers easy
