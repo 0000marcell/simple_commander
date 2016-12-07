@@ -42,8 +42,9 @@ module IO_helper
 		FileUtils.remove_file path
 	end
 
+	# remove folder recursively 
 	def rm_dir(path)
-		FileUtils.rmdir path 
+		FileUtils.rm_rf path 
 	end
 
 	def in_file?(string, path)

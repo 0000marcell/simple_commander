@@ -28,7 +28,8 @@ describe SimpleCommander::Command do
 
   describe '#option' do
     it 'should add options' do
-      expect { @command.option '--recursive' }.to change(@command.options, :length).from(1).to(2)
+      expect { @command.option '--recursive' }.to 
+				change(@command.options, :length).from(1).to(2)
     end
 
     it 'should allow procs as option handlers' do
@@ -46,6 +47,7 @@ describe SimpleCommander::Command do
   describe '#run' do
 		describe 'should call the right nested command' do
 			it 'calls the right nested command' do
+				@nested_command.run ''
 			end
 		end
 

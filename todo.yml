@@ -1,7 +1,4 @@
 cli:
-  bug when using nested commands with the same name, only the last definition
-    testing how the nesting of commands works, using spec_helper and running tests
-  is called
   creating ember generate on sc_scripts/em 
   set up a default templated path for newly created programs
   create the ember-generate program with the new version
@@ -10,6 +7,10 @@ cli:
   realease a new version and test its functionalities
   identify if the name of the program is permited
   test the new version on windows
+  avoid nesting commands for now, focus and finishing ember and rails commands
+    bug when using nested commands with the same name, only the last definition
+      testing how the nesting of commands works, 
+      using spec_helper and running tests is called
 
 release:
 march 2017
