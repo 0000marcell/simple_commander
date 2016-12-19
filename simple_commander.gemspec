@@ -16,6 +16,7 @@ Gem::Specification.new do |s|
 	s.require_paths = ['lib'] 
 	s.license     = 'MIT'
 	s.add_runtime_dependency('highline', '~> 1.7.2')
+  s.add_runtime_dependency('colorized', '~> 0.8.1')
 	s.add_development_dependency('rspec', '~> 3.2')
   s.add_development_dependency('rake')
   s.add_development_dependency('simplecov')
