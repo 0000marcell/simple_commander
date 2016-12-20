@@ -2,7 +2,12 @@ require 'colorize'
 require 'erb'
 
 module IO_helper
-	def run_cmd(path)
+  def run_cmd(command)
+    puts "running command: #{command}".colorize(:light_green)  
+    puts `#{command}`
+  end
+
+	def run_in(path)
 		FileUtils.cd(path) do
 			yield
 		end
@@ -27,17 +32,17 @@ module IO_helper
 		FileUtils.copy_entry(src, dest)
 	end
 
-	def template(src, dest, replace=false)
+	def template(src, dest, context, replace=true)
 		if(File.file?(dest) and !replace)
 			puts "template ERROR: #{dest} already exist!".colorize(:red)
 			return 0
 		end
-    puts "template from #{src} to #{dest} replace: #{replace}".colorize(:yellow)
+    puts "template from #{src} to #{dest} replace: #{replace}".colorize(:magenta)
 		template = File.open(src, 'r')
 		file_contents = template.read
 		template.close
 		renderer = ERB.new(file_contents)
-		result = renderer.result(binding)
+		result = renderer.result(context)
 		output = File.open(dest, 'w+')
 		output.write(result)
 		output.close
