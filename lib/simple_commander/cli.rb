@@ -62,25 +62,26 @@ simple_commander init
 			fail InvalidProgram, "program #{args[0]} already exists!", caller if File.directory?(s_path)
 			@program_name = args[0]
 			@lib_path    = "#{s_path}/lib" 
-			@helper_path = "#{s_path}/helpers" 
+			@helper_path = File.expand_path "#{s_path}" + "/../helpers" 
+
 			mkdir s_path 
 			mkdir "#{s_path}/bin"
 			mkdir "#{s_path}/spec"
 			mkdir "#{s_path}/lib"
-			mkdir "#{s_path}/helpers"
+			mkdir @helper_path
 			mkdir "#{s_path}/lib/#{@program_name}"
 			template "#{TEMPLATE_PATH}/lib.erb",
-				"#{s_path}/lib/#{@program_name}.rb"
+				"#{s_path}/lib/#{@program_name}.rb", binding
 
 			template "#{TEMPLATE_PATH}/version.erb",
-				"#{s_path}/lib/#{@program_name}/version.rb"
+				"#{s_path}/lib/#{@program_name}/version.rb", binding
 
 			template "#{TEMPLATE_PATH}/bin.erb",
-				"#{s_path}/bin/#{@program_name}"
+				"#{s_path}/bin/#{@program_name}", binding
 			FileUtils.chmod "+x", "#{s_path}/bin/#{@program_name}"
 			copy "#{s_path}/bin/#{@program_name}", exec_path if exec_path
-			copy "#{HELPERS_PATH}/io_helper.rb", "#{s_path}/helpers/io_helper.rb"
-			copy "#{HELPERS_PATH}/http_helper.rb", "#{s_path}/helpers/http_helper.rb"
+			copy "#{HELPERS_PATH}/io_helper.rb", "#{@helper_path}/io_helper.rb"
+			copy "#{HELPERS_PATH}/http_helper.rb", "#{@helper_path}/http_helper.rb"
 		end
 
 		##
