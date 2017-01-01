@@ -127,6 +127,11 @@ module IO_helper
 		File.open(path, 'w+'){|f| f.write(new_lines.join)}
 	end
 
+  def cd_in(path) 
+    puts "cd into #{path}".colorize(:green)
+    FileUtils.cd(path)
+  end
+
 	def cli_exist?(path, cli)
 		File.directory?("#{path}/#{cli}")
 	end
