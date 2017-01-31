@@ -1,4 +1,8 @@
 require 'colorize'
+require 'active_support/inflector'
+
+#camelize
+#pluralize
 
 module STR_helper
   def camelize(string, type = 'lower')
@@ -9,5 +13,9 @@ module STR_helper
     else
       return string.capitalize
     end
+  end
+
+  def pluralize(string)
+    string.pluralize
   end
 end
