@@ -1,9 +1,10 @@
 require 'spec_helper'
 require 'simple_commander/cli'
-require 'byebug'
 require_relative '../helpers/io_helper'
+require 'fileutils'
 
 describe IO_helper do
+  include IO_helper
   TEST_FILE =
     File.dirname(__FILE__) + '/mock/test.rb'
 
@@ -18,8 +19,40 @@ describe IO_helper do
   describe '#in_file?' do
     it "verifies if a string is in the file" do 
       File.open(TEST_FILE, 'w+'){|f| f.write('something!')}
-      result = in_file? "something", TEST_FILE
+      result = in_file? "something!", TEST_FILE
       expect(result).to eq(true)
+    end
+
+    it "return false if a string is not in the file" do
+      File.open(TEST_FILE, 'w+'){|f| f.write('asf!')}
+      result = in_file? "something!", TEST_FILE
+      expect(result).to eq(false)
+    end
+  end
+
+  describe '#in_file_snippet?' do
+    it "verifies if a string is in a file between two tokens" do
+      str = <<~HEREDOC
+        def this
+          something
+        end
+      HEREDOC
+      File.open(TEST_FILE, 'w+'){|f| f.write(str)}
+      result = in_file_snippet? "def", "end", "something",
+                TEST_FILE
+      expect(result).to eq(true)
+    end
+
+    it "returns false if the string is somewhere else" do
+      str = <<~HEREDOC
+        def this
+        end
+        something
+      HEREDOC
+      File.open(TEST_FILE, 'w+'){|f| f.write(str)}
+      result = in_file_snippet? "def", "end", "something",
+                TEST_FILE
+      expect(result).to eq(false)
     end
   end
 end

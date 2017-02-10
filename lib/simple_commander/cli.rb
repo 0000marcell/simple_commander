@@ -2,7 +2,6 @@
 require 'yaml'
 require File.dirname(__FILE__) + '/../../helpers/io_helper'
 require 'fileutils'
-require 'byebug'
 
 module SimpleCommander
 	class CLI

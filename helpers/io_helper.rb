@@ -1,6 +1,5 @@
 require 'colorize'
 require 'erb'
-require 'byebug'
 
 #functions
 # run_cmd
@@ -12,6 +11,7 @@ require 'byebug'
 # rm_file
 # rm_dir
 # in_file?
+# in_file_snippet?
 # write_start
 # write_end
 # write_after
@@ -84,10 +84,22 @@ module IO_helper
 
 	def in_file?(string, path)
     puts "checking if #{string} is in #{path}".colorize(:magenta)
-		regexp, content = Regexp.new string
+		regexp, content = Regexp.new(Regexp.escape(string))
 		File.open(path, 'r'){|f| content = f.read }
-    content =~ regexp
+    content =~ regexp ? true : false
 	end
+
+  def in_file_snippet?(id_start, id_end, string, path)
+    puts <<~HEREDOC
+      checking if the string #{string} is between #{id_start}  
+      and #{id_end} in the file #{path}
+    HEREDOC
+    regexp, content = Regexp.new(Regexp.escape(string))
+    File.open(path, 'r'){|f| content = f.read }
+    content = content.split(id_start)[1]
+    content = content.split(id_end)[0]
+    content =~ regexp ? true : false
+  end
 
 	def write_start(string, path)
     puts "Trying to write at the start #{string[0...8]} ... on the file #{path}".colorize(:magenta)
