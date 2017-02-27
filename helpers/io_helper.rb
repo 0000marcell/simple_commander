@@ -16,6 +16,7 @@ require 'erb'
 # write_end
 # write_after
 # write_in
+# find_file
 # rm_string
 # rm_block 
 # cd_in
@@ -73,7 +74,11 @@ module IO_helper
 
 	def rm_file(path)
     puts "rm file #{path}".colorize(:light_red)
-		FileUtils.remove_file path
+    if File.file? path
+		  FileUtils.remove_file path
+    else
+      puts "File #{path} does not exit!".colorize(:light_red)
+    end
 	end
 
 	# remove folder recursively 
@@ -90,10 +95,11 @@ module IO_helper
 	end
 
   def in_file_snippet?(id_start, id_end, string, path)
-    puts <<~HEREDOC
+    msg = <<~HEREDOC
       checking if the string #{string} is between #{id_start}  
       and #{id_end} in the file #{path}
     HEREDOC
+    puts msg.colorize(:magenta)
     regexp, content = Regexp.new(Regexp.escape(string))
     File.open(path, 'r'){|f| content = f.read }
     content = content.split(id_start)[1]
@@ -163,6 +169,18 @@ module IO_helper
     else
       File.open(path, 'w+'){|f| f.write(new_lines.join)}
     end
+  end
+
+  # tries to find a file with a part of the name
+  def find_file(file_name, dir)
+    Dir.foreach(dir) do |item|
+      next if item == '.' or item == '..'
+      regexp = Regexp.new(Regexp.escape(file_name))
+      if item =~ regexp
+        return item
+      end
+    end
+    return false
   end
 
 	def rm_string(string, path)

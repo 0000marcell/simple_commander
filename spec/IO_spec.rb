@@ -7,6 +7,8 @@ describe IO_helper do
   include IO_helper
   TEST_FILE =
     File.dirname(__FILE__) + '/mock/test.rb'
+  TEST_DIR =
+    File.dirname(__FILE__) + '/mock'
 
   before :each do
     FileUtils.touch(TEST_FILE)
@@ -52,6 +54,18 @@ describe IO_helper do
       File.open(TEST_FILE, 'w+'){|f| f.write(str)}
       result = in_file_snippet? "def", "end", "something",
                 TEST_FILE
+      expect(result).to eq(false)
+    end
+  end
+
+  describe '#find_file' do
+    it "verifies if a file name containing a string exists in a dir" do
+      result = find_file('te', TEST_DIR)
+      expect(result).to eq('test.rb')
+    end
+
+    it "returns false if a file was not found" do
+      result = find_file('zzz', TEST_DIR)
       expect(result).to eq(false)
     end
   end
